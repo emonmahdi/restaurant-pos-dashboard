@@ -2,11 +2,11 @@
 <html lang="en">
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctor-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:45 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:45 GMT -->
 
 <head>
     <meta charset="utf-8" />
-    <title>Profile | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Doctors | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -47,7 +47,6 @@
                 </span>
             </a>
 
-
             <!-- Sidebar Hover Menu Toggle Button -->
             <button class="button-sm-hover">
                 <i class="ti ti-circle align-middle"></i>
@@ -72,20 +71,21 @@
                         </a>
                     </li>
 
+
                     <li class="side-nav-title mt-2">Apps & Pages</li>
                     <!-- Category -->
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false"
-                            aria-controls="sidebarHospital" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#sidebarCategory" aria-expanded="false"
+                            aria-controls="sidebarCategory" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                             <span class="menu-text"> Category</span>
                             <span class="menu-arrow"></span>
                         </a>
-                        <div class="collapse" id="sidebarHospital">
+                        <div class="collapse" id="sidebarCategory">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
-                                    <a href="apps-category-all-category.html" class="side-nav-link">
-                                        <span class="menu-text">All Category</span>
+                                    <a href="apps-product-all-products.html" class="side-nav-link">
+                                        <span class="menu-text">All Product</span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
@@ -93,6 +93,8 @@
                                         <span class="menu-text">Add New Category</span>
                                     </a>
                                 </li>
+
+
                             </ul>
                         </div>
                     </li>
@@ -107,13 +109,13 @@
                         <div class="collapse" id="sidebarEcommerce">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
-                                    <a href="apps-product-all-products.html" class="side-nav-link">
-                                        <span class="menu-text">All Product</span>
+                                    <a href="apps-ecommerce-products.html" class="side-nav-link">
+                                        <span class="menu-text">Add New Product</span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
                                     <a href="apps-ecommerce-products-grid.html" class="side-nav-link">
-                                        <span class="menu-text">Add New Product</span>
+                                        <span class="menu-text">All Products </span>
                                     </a>
                                 </li>
                             </ul>
@@ -212,15 +214,9 @@
                         </a>
                     </li>
 
+
                 </ul>
 
-                <!-- Help Box -->
-                <div class="help-box text-center">
-                    <img src="assets/images/coffee-cup.svg" height="90" alt="Helper Icon Image" />
-                    <h5 class="mt-3 fw-semibold fs-16">Unlimited Access</h5>
-                    <p class="mb-3 text-muted">Upgrade to plan to get access to unlimited reports</p>
-                    <a href="javascript: void(0);" class="btn btn-danger btn-sm">Upgrade</a>
-                </div>
 
                 <div class="clearfix"></div>
             </div>
@@ -800,15 +796,15 @@
         <!-- ============================================================== -->
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
-
         <div class="page-content">
 
-            <div class="container-fluid">
+            <!-- Start Content-->
+            <div class="page-container">
 
 
                 <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
                     <div class="flex-grow-1">
-                        <h4 class="fs-18 fw-semibold mb-0">Doctor Profile</h4>
+                        <h4 class="fs-18 fw-semibold mb-0">Doctors</h4>
                     </div>
 
                     <div class="text-end">
@@ -817,7 +813,7 @@
 
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Hospital</a></li>
 
-                            <li class="breadcrumb-item active">Doctor Profile</li>
+                            <li class="breadcrumb-item active">Doctors</li>
                         </ol>
                     </div>
                 </div>
@@ -826,564 +822,460 @@
 
 
                 <div class="row">
-                    <div class="col-xl-4 col-lg-12">
+                    <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
-                                <div class="dr-profile-bg rounded-top position-relative mx-n3 mt-n3 position-relative">
-                                    <img src="assets/images/users/avatar-3.jpg" alt=""
-                                        class="border border-light border-3 rounded-circle position-absolute top-100 start-50 translate-middle"
-                                        height="100" width="100">
-                                </div>
-                                <div class="mt-4 mb-2 pt-3  text-center">
-                                    <p class="mb-1 fs-18 fw-semibold text-dark">Dr. James Roger</p>
-                                    <p class="mb-0 fw-medium text-muted">(MD , Cardiology)</p>
-                                </div>
-                                <h5 class="card-title fw-semibold">About Doctor :</h5>
-                                <p class="mt-2">Dr. James Roger has vast experience in treating cardiovascular diseases.
-                                    He has presented papers at national and international levels. Currently, he is a
-                                    Professor and Head at a Medical College specializing in Cardiology.</p>
-                                <div class="mt-3">
-                                    <div class="row">
-                                        <!-- Operations -->
-                                        <div class="col-lg-3 col-3">
-                                            <h5>Operations</h5>
-                                            <p class="fs-15 text-dark fw-semibold mb-0">1302</p>
-                                        </div>
-
-                                        <!-- Hospital -->
-                                        <div class="col-lg-3 col-3">
-                                            <h5>Hospital</h5>
-                                            <p class="fs-15 text-dark fw-semibold mb-0">40</p>
-                                        </div>
-
-                                        <!-- Patient -->
-                                        <div class="col-lg-3 col-3">
-                                            <h5>Patient</h5>
-                                            <p class="fs-15 text-dark fw-semibold mb-0">3412</p>
-                                        </div>
-
-                                        <!-- Experience -->
-                                        <div class="col-lg-3 col-3">
-                                            <h5>Experience</h5>
-                                            <p class="fs-15 text-dark fw-semibold mb-0">14 Year</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h5 class="card-title fw-semibold mt-4 mb-2">Doctor Level :</h5>
-                                <span
-                                    class="badge bg-light text-dark my-1 px-2 py-1 rounded-pill fw-medium fs-12">General
-                                    Cardiology</span>
-                                <span
-                                    class="badge bg-light text-dark my-1 px-2 py-1 rounded-pill fw-medium fs-12">Echocardiology</span>
-                                <span
-                                    class="badge bg-light text-dark my-1 px-2 py-1 rounded-pill fw-medium fs-12">Senior
-                                    Doctor</span>
-                                <span
-                                    class="badge bg-light text-dark my-1 px-2 py-1 rounded-pill fw-medium fs-12">CHO</span>
-                                <span class="badge bg-light text-dark mt-1 px-2 py-1 rounded-pill fw-medium fs-12">Adult
-                                    Congenital Cardiology</span>
-                                <h5 class="card-title fw-semibold mt-4">Doctor Rating :</h5>
-                                <div class="flex-grow-1 d-inline-flex align-items-center fs-20 mt-1">
-                                    <span class="ti ti-star-filled text-warning"></span>
-                                    <span class="ti ti-star-filled text-warning"></span>
-                                    <span class="ti ti-star-filled text-warning"></span>
-                                    <span class="ti ti-star-filled text-warning"></span>
-                                    <span class="ti ti-star-half text-warning"></span>
-                                    <span class="ms-1 fs-14">4.6k Reviews </span>
-                                </div>
-
-                            </div>
-                            <div class="card-footer border-top gap-1 hstack">
-                                <a href="#!" class="btn btn-primary w-100">Send Message</a>
-                                <a href="#!" class="btn btn-light w-100">Follow</a>
-                                <a href="#!"
-                                    class="btn btn-dark d-inline-flex align-items-center justify-content-center rounded avatar-md"><i
-                                        class="ti ti-edit fs-20"></i></a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title mb-3">Appointment :</h4>
-                                <div class="border border-dashed bg-light bg-opacity-10 p-3 rounded">
-                                    <form>
-                                        <div class="mb-2">
-                                            <label class="form-label">Date</label>
-                                            <input type="text" class="form-control" data-provider="flatpickr"
-                                                data-date-format="d M, Y" placeholder="Select date">
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="schedule-time" class="form-label">Time</label>
-                                            <input type="text" class="form-control flatpickr-input active py-2"
-                                                data-provider="timepickr" data-time-basic="true" id="timepicker-example"
-                                                readonly="readonly" placeholder="12:00 PM">
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="schedule-name" class="form-label">Name</label>
-                                            <input type="text" id="schedule-name" name="schedule-name"
-                                                class="form-control" placeholder="Your Full Name">
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="schedule-email" class="form-label">Email</label>
-                                            <input type="email" id="schedule-email" name="schedule-email"
-                                                class="form-control" placeholder="Email">
-                                        </div>
-                                        <div class="mb-2">
-                                            <label for="schedule-number" class="form-label">Phone number</label>
-                                            <input type="number" id="schedule-number" name="schedule-number"
-                                                class="form-control" placeholder="Number">
-                                        </div>
-                                        <div>
-                                            <label for="schedule-textarea" class="form-label">Write Problems</label>
-                                            <textarea class="form-control" id="schedule-textarea" rows="3"
-                                                placeholder="Message"></textarea>
-                                        </div>
-                                    </form>
+                            <div
+                                class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
+                                <h4 class="header-title">Doctor List</h4>
+                                <div>
+                                    <a href="apps-hospital-add-doctors.html" class="btn btn-success bg-gradient"><i
+                                            class="ti ti-plus me-1"></i> Add Doctor</a>
+                                    <a href="#" class="btn btn-secondary bg-gradient"><i
+                                            class="ti ti-file-import me-1"></i> Import</a>
                                 </div>
                             </div>
-                            <div class="card-footer border-top">
-                                <a href="#!" class="btn btn-primary w-100">Book Appointment</a>
-                            </div>
-                        </div>
-                    </div> <!-- end col-->
+                            <div class="table-responsive">
+                                <table class="table table-nowrap mb-0">
+                                    <thead class="bg-light-subtle">
+                                        <tr>
+                                            <th class="ps-3" style="width: 50px;">
+                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                            </th>
+                                            <th>Doctor ID</th>
+                                            <th>Doctor Name</th>
+                                            <th>Specialty</th>
+                                            <th>Phone Number</th>
+                                            <th>Email</th>
+                                            <th>Timing</th>
+                                            <th>Years of Experience</th>
+                                            <th class="text-center" style="width: 120px;">Action</th>
+                                        </tr>
+                                    </thead><!-- end thead -->
 
-                    <div class="col-xl-8 col-lg-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div>
-                                            <h4 class="card-title">Personal Information :</h4>
-                                            <div class="table-responsive mt-3 border border-dashed rounded px-2 py-1">
-                                                <table class="table table-borderless m-0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="mb-0"> Doctor Name : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14">James D. Roger
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="mb-0"> Position : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14">General
-                                                                Cardiology , CHO</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="mb-0"> Mobile Number : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14">+96 303-975-3491
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="mb-0">Email Address : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14">
-                                                                jamesdroger@armyspy.com</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="mb-0">Location : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14">1971 Carter
-                                                                Street Stoups, IL 63101, USA</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>
-                                                                <p class="d-flex mb-0 align-items-center gap-1">Web Site
-                                                                    : </p>
-                                                            </td>
-                                                            <td class="px-2 text-dark fw-medium fs-14"><a
-                                                                    href="#!">www.coderthemes.com </a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div>
-                                            <h4 class="card-title">Abilities :</h4>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-1">
-                                                <p class="mb-0 fs-15 fw-medium text-dark">Operations</p>
-                                                <div>
-                                                    <p class="mb-0 fs-15 fw-medium text-dark">40%</p>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                            </td>
+                                            <td>DR0001</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-3.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. James D. Roger</a>
+                                            </td>
+                                            <td>Cardiology</td>
+                                            <td>
+                                                +96 303-975-3491
+                                            </td>
+                                            <td>
+                                                jamesdroger@armyspy.com
+                                            </td>
+                                            <td>
+                                                Mon-Fri: 9 AM - 5 PM
+                                            </td>
+                                            <td>
+                                                14 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
                                                 </div>
-                                            </div>
-                                            <div class="progress progress-soft progress-md">
-                                                <div class="progress-bar bg-primary" role="progressbar"
-                                                    style="width: 40%" aria-valuenow="" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-1">
-                                                <p class="mb-0 fs-15 fw-medium text-dark">Colestrol</p>
-                                                <div>
-                                                    <p class="mb-0 fs-15 fw-medium text-dark">50%</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck3">
+                                            </td>
+                                            <td>DR0002</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-2.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Morgan H. Beck</a>
+
+                                            </td>
+                                            <td>Dermatology</td>
+                                            <td>
+                                                +56 408-272-5403
+                                            </td>
+                                            <td>
+                                                morganhbeck@rhyta.com
+                                            </td>
+                                            <td>
+                                                Mon-Fri: 10 AM - 6 PM
+                                            </td>
+                                            <td>
+                                                09 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
                                                 </div>
-                                            </div>
-                                            <div class="progress progress-soft progress-md">
-                                                <div class="progress-bar bg-success" role="progressbar"
-                                                    style="width: 50%" aria-valuenow="" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-1">
-                                                <p class="mb-0 fs-15 fw-medium text-dark">Therapy</p>
-                                                <div>
-                                                    <p class="mb-0 fs-15 fw-medium text-dark">34%</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck4">
+                                            </td>
+                                            <td>DR0003</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-4.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Terry J. Bowers</a>
+                                            </td>
+                                            <td>Pediatrics</td>
+                                            <td>
+                                                +92 845-693-5084
+                                            </td>
+                                            <td>
+                                                terryjbowers@teleworm.us
+                                            </td>
+                                            <td>
+                                                Tue-Sat: 8 AM - 4 PM
+                                            </td>
+                                            <td>
+                                                12 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
                                                 </div>
-                                            </div>
-                                            <div class="progress progress-soft progress-md">
-                                                <div class="progress-bar bg-warning" role="progressbar"
-                                                    style="width: 34%" aria-valuenow="" aria-valuemin="0"
-                                                    aria-valuemax="100"></div>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-1">
-                                                <p class="mb-0 fs-15 fw-medium text-dark">Mediation</p>
-                                                <div>
-                                                    <p class="mb-0 fs-15 fw-medium text-dark">60%</p>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck5">
+                                            </td>
+                                            <td>DR0004</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-5.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Carlos McCollum</a>
+                                            </td>
+                                            <td>Orthopedics</td>
+                                            <td>
+                                                +68 036961 83 22
+                                            </td>
+                                            <td>
+                                                carloslmccollum@rhyta.com
+                                            </td>
+                                            <td>
+                                                Mon-Thu: 9 AM - 5 PM
+                                            </td>
+                                            <td>
+                                                17 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
                                                 </div>
-                                            </div>
-                                            <div class="progress progress-soft progress-md">
-                                                <div class="progress-bar bg-info" role="progressbar" style="width: 60%"
-                                                    aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h4 class="card-title mt-3 pt-2">Experience :</h4>
-                                <div class="row g-3 mt-1">
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="d-flex flex-wrap p-2 align-items-center rounded gap-3 border">
-                                            <img src="assets/images/dr-profile/h-1.svg" alt="" class="avatar-xl">
-                                            <div>
-                                                <p class="text-dark fw-semibold mb-1 fs-16">Brentwood's Health Company
-                                                    Senior CHO</p>
-                                                <p class="text-dark fw-medium mb-1 fs-14">ETN Doctor - Head - Online
-                                                    Consultation - Fulltime</p>
-                                                <p class="mb-1">Dec 2020 - Present , 4 yer 1 mos</p>
-                                                <p class="mb-1">Sharon Lane Michigan City, IN 46360</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="d-flex flex-wrap p-2 align-items-center rounded gap-3 border">
-                                            <img src="assets/images/dr-profile/h-2.svg" alt="" class="avatar-xl">
-                                            <div>
-                                                <p class="text-dark fw-semibold mb-1 fs-16">Hospital Dynamics Head
-                                                    Doctor</p>
-                                                <p class="text-dark fw-medium mb-1 fs-14">ETN Doctor - General
-                                                    Cardiology - Fulltime</p>
-                                                <p class="mb-1">Dec 2016 - Nov 2020 , 5 yer 4 mos</p>
-                                                <p class="mb-1">Friendship Lane Santa Clara, CA 95050</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="d-flex flex-wrap p-2 align-items-center rounded gap-3 border">
-                                            <img src="assets/images/dr-profile/h-3.svg" alt="" class="avatar-xl">
-                                            <div>
-                                                <p class="text-dark fw-semibold mb-1 fs-16">Florida Multi Specialist
-                                                    Hospital</p>
-                                                <p class="text-dark fw-medium mb-1 fs-14">ETN Doctor - Echocardiology -
-                                                    Fulltime</p>
-                                                <p class="mb-1">Dec 2014 - Nov 2016 , 3 yer 2 mos</p>
-                                                <p class="mb-1">Simpson Street Bloomington, IL 61701</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck6">
+                                            </td>
+                                            <td>DR0005</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-6.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Jeanetta D. Hovey</a>
+                                            </td>
+                                            <td>Neurology</td>
+                                            <td>
+                                                +62 0951 29 41 23
+                                            </td>
+                                            <td>
+                                                jeanettadhovey@jourrapide.com
+                                            </td>
+                                            <td>
+                                                Wed-Sat: 1 PM - 9 PM
+                                            </td>
+                                            <td>
+                                                10 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck7">
+                                            </td>
+                                            <td>DR0006</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-7.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Erma D. Coffman</a>
+                                            </td>
+                                            <td>Gastroenterology</td>
+                                            <td>
+                                                +44 06588 19 07 95
+                                            </td>
+                                            <td>
+                                                ermadcoffman@jourrapide.com
+                                            </td>
+                                            <td>
+                                                Mon-Sat: 6 AM - 2 PM
+                                            </td>
+                                            <td>
+                                                06 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck8">
+                                            </td>
+                                            <td>DR0007</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-8.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Dorian T. Lackey</a>
+                                            </td>
+                                            <td>Oncology</td>
+                                            <td>
+                                                +41 02161 72 22 77
+                                            </td>
+                                            <td>
+                                                doriantlackey@teleworm.us
+                                            </td>
+                                            <td>
+                                                Fri-Sun: 9 AM - 5 PM
+                                            </td>
+                                            <td>
+                                                04 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck9">
+                                            </td>
+                                            <td>DR0008</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-9.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Kelli H. Bailey</a>
+                                            </td>
+                                            <td>Psychiatry</td>
+                                            <td>
+                                                +99 073 38 56 39
+                                            </td>
+                                            <td>
+                                                kelligbailey@rhyta.com
+                                            </td>
+                                            <td>
+                                                Mon-Fri: 8 AM - 4 PM
+                                            </td>
+                                            <td>
+                                                12 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck10">
+                                            </td>
+                                            <td>DR0009</td>
+                                            <td>
+                                                <img src="assets/images/users/avatar-10.jpg"
+                                                    class="avatar-sm rounded-circle me-2" alt="...">
+                                                <a href="apps-hospital-doctor-details.html"
+                                                    class="text-dark fw-medium">Dr. Robert A. Camp </a>
+                                            </td>
+                                            <td>Endocrinology</td>
+                                            <td>
+                                                +9 08684 81 00 91
+                                            </td>
+                                            <td>
+                                                robertacampbell@armyspy.com
+                                            </td>
+                                            <td>
+                                                Tue-Sat: 9 AM - 5 PM
+                                            </td>
+                                            <td>
+                                                19 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck11">
+                                            </td>
+                                            <td>DR00010</td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar avatar-sm">
+                                                        <span class="avatar-title bg-warning rounded-circle fw-bold">
+                                                            J
+                                                        </span>
+                                                    </div>
+                                                    <a href="apps-hospital-doctor-details.html"
+                                                        class="text-dark fw-medium">Dr. Jewel B. Odom</a>
+                                                </div>
+                                            </td>
+                                            <td>Ophthalmology</td>
+                                            <td>
+                                                +41 0451 67 15 47
+                                            </td>
+                                            <td>
+                                                jewelbodom@armyspy.com
+                                            </td>
+                                            <td>
+                                                Mon-Thu: 10 AM - 6 PM
+                                            </td>
+                                            <td>
+                                                03 Years
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody><!-- end tbody -->
+                                </table><!-- end table -->
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header border-bottom border-dashed">
-                                        <h4 class="card-title mb-0">Skills</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div id="multiple-radialbar" class="apex-charts"
-                                            data-colors="#313a46,#f9c45c,#465dff,#6ac75a"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="card">
-                                    <div class="card-header border-bottom border-dashed">
-                                        <h4 class="card-title mb-0">Specialty</h4>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="d-flex align-items-center gap-2">
-                                            <div
-                                                class="avatar-lg bg-light d-flex align-items-center justify-content-center rounded">
-                                                <iconify-icon icon="solar:user-check-rounded-bold-duotone"
-                                                    class="fs-28 text-primary"></iconify-icon>
-                                            </div>
-
-                                            <div>
-                                                <p class="fs-15 mb-0">General adult cardiologists</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2 mt-3">
-                                            <div
-                                                class="avatar-lg bg-light d-flex align-items-center justify-content-center rounded">
-                                                <iconify-icon icon="solar:hand-heart-bold-duotone"
-                                                    class="fs-28 text-primary"></iconify-icon>
-                                            </div>
-
-                                            <div>
-                                                <p class="fs-15 mb-0">Cardiac imaging specialists</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2 mt-3">
-                                            <div
-                                                class="avatar-lg bg-light d-flex align-items-center justify-content-center rounded">
-                                                <iconify-icon icon="solar:clipboard-heart-bold-duotone"
-                                                    class="fs-28 text-primary"></iconify-icon>
-                                            </div>
-
-                                            <div>
-                                                <p class="fs-15 mb-0">Electrophysiologists</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2 mt-3">
-                                            <div
-                                                class="avatar-lg bg-light d-flex align-items-center justify-content-center rounded">
-                                                <iconify-icon icon="solar:heart-pulse-bold-duotone"
-                                                    class="fs-28 text-primary"></iconify-icon>
-                                            </div>
-
-                                            <div>
-                                                <p class="fs-15 mb-0">Adult congenital heart specialists</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-center gap-2 mt-3">
-                                            <div
-                                                class="avatar-lg bg-light d-flex align-items-center justify-content-center rounded">
-                                                <iconify-icon icon="solar:heart-bold-duotone"
-                                                    class="fs-28 text-primary"></iconify-icon>
-                                            </div>
-
-                                            <div>
-                                                <p class="fs-15 mb-0">Heart surgeons</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="card">
-                                    <div class="card-header border-bottom border-dashed">
-                                        <h4 class="card-title mb-0">Today Appointment List</h4>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table table-nowrap mb-0">
-                                                <thead class="bg-light bg-opacity-25">
-                                                    <tr>
-                                                        <th class="ps-3" style="width: 50px;">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck1">
-                                                        </th>
-                                                        <th>Patient Name</th>
-                                                        <th>Appointment Date</th>
-                                                        <th>Appointment Time</th>
-                                                        <th>Phone Number</th>
-                                                        <th>Reason for Visit</th>
-                                                        <th class="text-center" style="width: 125px;">Action</th>
-                                                    </tr>
-                                                </thead><!-- end thead -->
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="ps-3">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck2">
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="mb-0 text-dark">
-                                                                <a href="#!" class="text-dark">John Doe</a>
-                                                            </h5>
-                                                        </td>
-                                                        <td>July 1, 2024</td>
-                                                        <td>
-                                                            9:00 AM
-                                                        </td>
-                                                        <td>
-                                                            +(567) 890-1234
-                                                        </td>
-                                                        <td>
-                                                            Annual Check-up
-                                                        </td>
-                                                        <td class="pe-3">
-                                                            <div class="d-flex gap-2">
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-primary btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-eye"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-success btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-edit"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-danger btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="ps-3">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck3">
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="mb-0 text-dark"> <a href="#!"
-                                                                    class="text-dark">Jane Smith </a>
-                                                            </h5>
-                                                        </td>
-                                                        <td>July 1, 2024</td>
-                                                        <td>
-                                                            9:30 AM
-                                                        </td>
-                                                        <td>
-                                                            +(456) 789-0123
-                                                        </td>
-                                                        <td>
-                                                            Consultation
-                                                        </td>
-                                                        <td class="pe-3">
-                                                            <div class="d-flex gap-2">
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-primary btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-eye"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-success btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-edit"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-danger btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="ps-3">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck4">
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="mb-0 text-dark"><a href="#!"
-                                                                    class="text-dark">Mike Johnson</a>
-                                                            </h5>
-                                                        </td>
-                                                        <td>July 1, 2024</td>
-                                                        <td>
-                                                            10:00 AM
-                                                        </td>
-                                                        <td>
-                                                            +(345) 678-9012
-                                                        </td>
-                                                        <td>
-                                                            Lab Results Review
-                                                        </td>
-                                                        <td class="pe-3">
-                                                            <div class="d-flex gap-2">
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-primary btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-eye"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-success btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-edit"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-danger btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="ps-3">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck5">
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="mb-0 text-dark"> <a href="#!"
-                                                                    class="text-dark">Emily Davis</a>
-                                                            </h5>
-                                                        </td>
-                                                        <td>July 1, 2024</td>
-                                                        <td>
-                                                            10:30 AM
-                                                        </td>
-                                                        <td>
-                                                            +(234) 567-8901
-                                                        </td>
-                                                        <td>
-                                                            Cardiology Follow-up
-                                                        </td>
-                                                        <td class="pe-3">
-                                                            <div class="d-flex gap-2">
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-primary btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-eye"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-success btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-edit"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-danger btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td class="ps-3">
-                                                            <input type="checkbox" class="form-check-input"
-                                                                id="customCheck6">
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="mb-0 text-dark"> <a href="#!"
-                                                                    class="text-dark">Sarah Wilson</a>
-                                                            </h5>
-                                                        </td>
-                                                        <td>July 1, 2024</td>
-                                                        <td>
-                                                            11:00 AM
-                                                        </td>
-                                                        <td>
-                                                            +(123) 456-7890
-                                                        </td>
-                                                        <td>
-                                                            Blood Pressure Check
-                                                        </td>
-                                                        <td class="pe-3">
-                                                            <div class="d-flex gap-2">
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-primary btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-eye"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-success btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-edit"></i></a>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-soft-danger btn-icon btn-sm rounded-circle">
-                                                                    <i class="ti ti-trash"></i></a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody><!-- end tbody -->
-                                            </table><!-- end table -->
-                                        </div>
-                                    </div>
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-end">
+                                    <ul class="pagination mb-0">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- end col -->
                 </div>
-                <!-- end row -->
 
             </div> <!-- container -->
 
@@ -1408,7 +1300,6 @@
             <!-- end Footer -->
 
         </div>
-
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
@@ -1853,21 +1744,9 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!-- Apex Chart js -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
-
-    <!-- Dropzone File Upload js -->
-    <script src="assets/vendor/dropzone/min/dropzone.min.js"></script>
-
-    <!-- File Upload Demo js -->
-    <script src="assets/js/pages/form-fileupload.js"></script>
-
-    <!-- Profile Demo App js -->
-    <script src="assets/js/pages/page-profile.js"></script>
-
 </body>
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctor-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:47 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:45 GMT -->
 
 </html>
