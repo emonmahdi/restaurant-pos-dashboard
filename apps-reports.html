@@ -23,6 +23,9 @@
     <!-- App css -->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
+    <!-- Include Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <!-- Icons css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
 </head>
@@ -804,25 +807,179 @@
 
             <div class="page-container">
 
-
-                <div class="page-container">
-
-
-                    <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
-                        <div class="flex-grow-1">
+                <!-- Page Title and Breadcrumb -->
+                <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+                    <div class="flex-grow-1 d-flex align-items-center gap-2">
+                        <span class="menu-icon bg-light p-2 rounded-circle">
+                            <i class="ti ti-report-money fs-20 text-primary"></i>
+                        </span>
+                        <div>
                             <h4 class="fs-18 fw-semibold mb-0">Reports</h4>
-                        </div>
-
-                        <div class="text-end">
-                            <ol class="breadcrumb m-0 py-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-
-                                <li class="breadcrumb-item active">Reports</li>
-                            </ol>
+                            <p class="text-muted mb-0 fs-13">View and export detailed financial and sales reports</p>
                         </div>
                     </div>
 
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Reports</li>
+                        </ol>
+                    </div>
+                </div>
 
+                <!-- Filter Section -->
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-body">
+                        <!-- Report Filter Section -->
+                        <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
+
+                            <!-- Date Range Picker -->
+                            <div class="flex-shrink-0" style="max-width: 250px;">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="ti ti-calendar"></i></span>
+                                    <input type="text" id="reportDateRange" class="form-control"
+                                        placeholder="Select Date Range">
+                                </div>
+                            </div>
+
+                            <!-- Report Type Selector -->
+                            <div class="flex-shrink-0" style="min-width: 180px;">
+                                <select class="form-select">
+                                    <option value="">Report Type</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="income">Income</option>
+                                    <option value="cost">Cost</option>
+                                    <option value="profit">Profit</option>
+                                </select>
+                            </div>
+
+                            <!-- Staff Selector -->
+                            <div class="flex-shrink-0" style="min-width: 180px;">
+                                <select class="form-select">
+                                    <option value="">Select Staff</option>
+                                    <option>All</option>
+                                    <option>Rahim Uddin</option>
+                                    <option>Karim Hossain</option>
+                                </select>
+                            </div>
+
+                            <!-- Export / Upload Button -->
+                            <div class="flex-shrink-0">
+                                <label class="btn btn-primary mb-0">
+                                    <i class="ti ti-file-export me-1"></i> Export Report
+                                    <input type="file" id="exportReportFile" class="d-none" accept=".csv, .xlsx">
+                                </label>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Summary Cards -->
+                <div class="row mt-4 g-3">
+                    <div class="col-md-3">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="ti ti-shopping-cart fs-24 text-success mb-2"></i>
+                                <h6 class="mb-1">Total Orders</h6>
+                                <h5 class="fw-semibold">$1,250</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="ti ti-currency-dollar fs-24 text-primary mb-2"></i>
+                                <h6 class="mb-1">Total Income</h6>
+                                <h5 class="fw-semibold">$2,500</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="ti ti-wallet fs-24 text-danger mb-2"></i>
+                                <h6 class="mb-1">Total Cost</h6>
+                                <h5 class="fw-semibold">$1,000</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card text-center shadow-sm">
+                            <div class="card-body">
+                                <i class="ti ti-chart-pie fs-24 text-warning mb-2"></i>
+                                <h6 class="mb-1">Total Profit</h6>
+                                <h5 class="fw-semibold">$1,500</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Table -->
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="ti ti-list-check me-2"></i> Detailed Reports</h5>
+                        <button class="btn btn-sm btn-outline-secondary">
+                            <i class="ti ti-printer me-1"></i> Print
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Staff</th>
+                                        <th>Order ID</th>
+                                        <th>Type</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th class="text-end">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>25 Aug 2025</td>
+                                        <td>Rahim Uddin</td>
+                                        <td>ORD001</td>
+                                        <td>Sale</td>
+                                        <td>$120</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>25 Aug 2025</td>
+                                        <td>Karim Hossain</td>
+                                        <td>ORD002</td>
+                                        <td>Sale</td>
+                                        <td>$85</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>24 Aug 2025</td>
+                                        <td>Sohana Akter</td>
+                                        <td>ORD003</td>
+                                        <td>Income</td>
+                                        <td>$50</td>
+                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -1291,6 +1448,18 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- Include Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Initialize Flatpickr for Date Range -->
+    <script>
+        flatpickr("#reportDateRange", {
+            mode: "range",
+            dateFormat: "d M Y",
+            allowInput: true
+        });
+    </script>
 
 </body>
 
