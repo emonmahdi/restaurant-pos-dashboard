@@ -2,11 +2,11 @@
 <html lang="en">
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:45 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-chat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:32 GMT -->
 
 <head>
     <meta charset="utf-8" />
-    <title>Doctors | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Chat | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -62,7 +62,6 @@
                 <!--- Sidenav Menu -->
                 <ul class="side-nav">
                     <li class="side-nav-title">Dash</li>
-
                     <li class="side-nav-item">
                         <a href="index.html" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
@@ -71,19 +70,20 @@
                         </a>
                     </li>
 
+
                     <!-- Category -->
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarCategory" aria-expanded="false"
-                            aria-controls="sidebarCategory" class="side-nav-link">
+                        <a data-bs-toggle="collapse" href="#posCategory" aria-expanded="false"
+                            aria-controls="posCategory" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
                             <span class="menu-text"> Category</span>
                             <span class="menu-arrow"></span>
                         </a>
-                        <div class="collapse" id="sidebarCategory">
+                        <div class="collapse" id="posCategory">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
                                     <a href="apps-category-all-category.html" class="side-nav-link">
-                                        <span class="menu-text">All Category</span>
+                                        <span class="menu-text">All Category </span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
@@ -91,42 +91,42 @@
                                         <span class="menu-text">Add New Category</span>
                                     </a>
                                 </li>
-
-
                             </ul>
                         </div>
                     </li>
                     <!-- Product -->
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
-                            aria-controls="sidebarEcommerce" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-basket"></i></span>
-                            <span class="menu-text"> Product </span>
+                        <a data-bs-toggle="collapse" href="#posProduct" aria-expanded="false" aria-controls="posProduct"
+                            class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+                            <span class="menu-text"> Product</span>
                             <span class="menu-arrow"></span>
                         </a>
-                        <div class="collapse" id="sidebarEcommerce">
+                        <div class="collapse" id="posProduct">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
-                                    <a href="apps-ecommerce-products.html" class="side-nav-link">
-                                        <span class="menu-text">Add New Product</span>
+                                    <a href="apps-product-all-products.html" class="side-nav-link">
+                                        <span class="menu-text">All Product</span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a href="apps-ecommerce-products-grid.html" class="side-nav-link">
-                                        <span class="menu-text">All Products </span>
+                                    <a href="apps-prodcut-add-new.html" class="side-nav-link">
+                                        <span class="menu-text">Add New Product</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
+
                     <!-- Supplier -->
                     <li class="side-nav-item">
                         <a href="apps-supplier.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
+                            <span class="menu-icon"><i class="ti ti-inbox"></i></span>
                             <span class="menu-text"> Supplier </span>
                         </a>
                     </li>
+
                     <!-- Stock -->
                     <li class="side-nav-item">
                         <a href="apps-stock.html" class="side-nav-link">
@@ -156,8 +156,8 @@
                         </a>
                     </li>
                     <!-- Cost-->
-                    <li class="side-nav-item">
-                        <a href="apps-cost.html" class="side-nav-link">
+                    <li class="side-nav-item" style="background-color: #2F3A5F;">
+                        <a href="apps-cost.html" class="side-nav-link" style=" color:#fff !important">
                             <span class="menu-icon"><i class="ti ti-message"></i></span>
                             <span class="menu-text"> Cost </span>
                         </a>
@@ -212,9 +212,15 @@
                         </a>
                     </li>
 
-
                 </ul>
 
+                <!-- Help Box -->
+                <!-- <div class="help-box text-center">
+                    <img src="assets/images/coffee-cup.svg" height="90" alt="Helper Icon Image" />
+                    <h5 class="mt-3 fw-semibold fs-16">Unlimited Access</h5>
+                    <p class="mb-3 text-muted">Upgrade to plan to get access to unlimited reports</p>
+                    <a href="javascript: void(0);" class="btn btn-danger btn-sm">Upgrade</a>
+                </div> -->
 
                 <div class="clearfix"></div>
             </div>
@@ -796,22 +802,19 @@
         <!-- ============================================================== -->
         <div class="page-content">
 
-            <!-- Start Content-->
             <div class="page-container">
 
 
                 <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
                     <div class="flex-grow-1">
-                        <h4 class="fs-18 fw-semibold mb-0">Doctors</h4>
+                        <h4 class="fs-18 fw-semibold mb-0">Chat</h4>
                     </div>
 
                     <div class="text-end">
                         <ol class="breadcrumb m-0 py-0">
                             <li class="breadcrumb-item"><a href="javascript: void(0);">Osen</a></li>
 
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hospital</a></li>
-
-                            <li class="breadcrumb-item active">Doctors</li>
+                            <li class="breadcrumb-item active">Chat</li>
                         </ol>
                     </div>
                 </div>
@@ -819,456 +822,774 @@
 
 
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div
-                                class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
-                                <h4 class="header-title">Doctor List</h4>
-                                <div>
-                                    <a href="apps-hospital-add-doctors.html" class="btn btn-success bg-gradient"><i
-                                            class="ti ti-plus me-1"></i> Add Doctor</a>
-                                    <a href="#" class="btn btn-secondary bg-gradient"><i
-                                            class="ti ti-file-import me-1"></i> Import</a>
+                <div class="card">
+                    <div class="chat d-flex">
+                        <div class="offcanvas-xxl offcanvas-start" tabindex="-1" id="chatUserList"
+                            aria-labelledby="chatUserListLabel">
+                            <div id="chat-user-list" class="collapse collapse-horizontal show">
+                                <div class="chat-user-list border-end">
+                                    <div class="card-body py-2 px-3 border-bottom">
+                                        <div class="d-flex align-items-center gap-2 py-1">
+                                            <div class="chat-users">
+                                                <div class="avatar-lg chat-avatar-online">
+                                                    <img src="assets/images/users/avatar-1.jpg"
+                                                        class="img-fluid rounded-circle" alt="Chris Keller">
+                                                </div>
+                                            </div>
+                                            <div class="flex-grow-1">
+                                                <h5 class="mb-0">
+                                                    <a href="#!" class="text-reset lh-base">Dhanoo K.</a>
+                                                </h5>
+                                                <p class="mb-0 text-muted">Admin</p>
+                                            </div>
+                                            <div class="dropdown lh-1">
+                                                <a href="#" class="dropdown-toggle drop-arrow-none card-drop"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <iconify-icon icon="solar:settings-outline"
+                                                        class="align-middle"></iconify-icon>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">
+                                                        <i class="ti ti-user-plus me-1 fs-17 align-middle"></i>
+                                                        <span class="align-middle">New Contact</span>
+                                                    </a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">
+                                                        <i class="ti ti-users-plus me-1 fs-17 align-middle"></i>
+                                                        <span class="align-middle">New Group</span>
+                                                    </a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">
+                                                        <i class="ti ti-star me-1 fs-17 align-middle"></i>
+                                                        <span class="align-middle">Favorites</span>
+                                                    </a>
+                                                    <!-- item-->
+                                                    <a href="javascript:void(0);" class="dropdown-item">
+                                                        <i class="ti ti-archive me-1 fs-17 align-middle"></i>
+                                                        <span class="align-middle">Archive Contacts</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <button type="button"
+                                                class="flex-grow-0 btn btn-sm btn-icon btn-soft-danger d-xl-none"
+                                                data-bs-dismiss="offcanvas" data-bs-target="#chatUserList"
+                                                aria-label="Close">
+                                                <i class="ti ti-x fs-20"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Contact list -->
+                                    <div class="d-flex flex-column">
+                                        <div class="users-list position-relative list-scroll" data-simplebar>
+
+                                            <div class="px-3 py-2">
+                                                <div class="app-search py-1">
+                                                    <input type="text"
+                                                        class="form-control border-light bg-light bg-opacity-50 rounded-2"
+                                                        placeholder="Search something here...">
+                                                    <i class="app-search-icon ti ti-search text-muted fs-16"></i>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="d-flex align-items-center px-3 py-2 bg-body-secondary position-sticky top-0 z-1">
+                                                <iconify-icon icon="solar:pin-bold-duotone"
+                                                    class="fs-18 text-muted"></iconify-icon>
+                                                <h5 class="mb-0 ms-1 fw-semibold fs-14">Pinned</h5>
+                                            </div><!-- end chat-title -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <img src="assets/images/users/avatar-2.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">5:45am</span>
+                                                            Brandon Smith
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 float-end text-end"><span
+                                                                    class="badge bg-danger-subtle text-danger">3</span></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">How
+                                                                are you today?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users active">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-5.jpg"
+                                                            class="img-fluid rounded-circle" alt="James Zavel" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">4:30am</span>
+                                                            James Zavel
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-success"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-primary fs-12 fw-semibold">typing...</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-8.jpg"
+                                                            class="img-fluid rounded-circle" alt="Maria Lopez" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">6:12pm</span>
+                                                            Maria Lopez
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 float-end text-end"><span
+                                                                    class="badge bg-danger-subtle text-danger">1</span></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">How
+                                                                are you today?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <div
+                                                            class="h-100 w-100 rounded-circle bg-info text-white d-flex align-items-center justify-content-center">
+                                                            <span class="fw-semibold">OD</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">6:12pm</span>
+                                                            Osen Discussion
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">JS
+                                                                Developer's Come in office?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <div
+                                                class="d-flex align-items-center px-3 py-2 bg-body-secondary position-sticky top-0 z-1">
+                                                <iconify-icon icon="solar:chat-line-bold-duotone"
+                                                    class="fs-18 text-muted"></iconify-icon>
+                                                <h5 class="mb-0 ms-1 fw-semibold fs-14">All Messages</h5>
+                                            </div><!-- end chat-title -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-3.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">3:40am</span>
+                                                            Eunice Bennett
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">Please
+                                                                check these design assets</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <div
+                                                            class="h-100 w-100 rounded-circle bg-warning text-white d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-brand-javascript fs-20"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">3:30am</span>
+                                                            Javascript Team
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-muted"><i
+                                                                    class="ti ti-check"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">New
+                                                                Project?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <div
+                                                            class="h-100 w-100 rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-brand-figma fs-20"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">3:30am</span>
+                                                            UI Team
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-muted"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">Project
+                                                                Completed</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <img src="assets/images/users/avatar-4.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">2:33am</span>
+                                                            Hoyt Bahe
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-success"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-primary fs-12 fw-semibold"><i
+                                                                    class="ti ti-microphone"></i> Voice Message</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users active">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-9.jpg"
+                                                            class="img-fluid rounded-circle" alt="James Zavel" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">4:35am</span>
+                                                            John Otta
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-success"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span class="w-75 d-inline-block fs-12">What next plan
+                                                                ?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-6.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">Tue</span>
+                                                            Louis Moller
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 float-end text-end"><span
+                                                                    class="badge bg-danger-subtle text-danger">1</span></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">Are
+                                                                you free for 15 min?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <img src="assets/images/users/avatar-7.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">Tue</span>
+                                                            David Callan
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 float-end text-end"><span
+                                                                    class="badge bg-danger-subtle text-danger">3</span></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">Are
+                                                                you interested in learning?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-online">
+                                                        <img src="assets/images/users/avatar-9.jpg"
+                                                            class="img-fluid rounded-circle" alt="Brandon Smith" />
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">Fri</span>
+                                                            Sean Lee
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-muted"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">Howdy?</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+
+                                            <a href="javascript:void(0);" class="text-body d-block">
+                                                <div class="chat-users">
+                                                    <div class="avatar-md chat-avatar-offline">
+                                                        <div
+                                                            class="h-100 w-100 rounded-circle bg-primary text-white d-flex align-items-center justify-content-center">
+                                                            <i class="ti ti-brand-react fs-20"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1 overflow-hidden">
+                                                        <h5 class="mt-0 mb-0 fs-13">
+                                                            <span class="float-end text-muted fs-12">Sat</span>
+                                                            React Team
+                                                        </h5>
+                                                        <p class="mt-1 mb-0 text-muted lh-1">
+                                                            <span class="w-25 text-end float-end text-success"><i
+                                                                    class="ti ti-checks"></i></span>
+                                                            <span
+                                                                class="w-75 d-inline-block text-truncate overflow-hidden">@jamesZavel
+                                                                Is new React employee</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a><!-- end chat-user -->
+                                        </div>
+                                    </div>
+                                    <!-- End Contact list -->
                                 </div>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table table-nowrap mb-0">
-                                    <thead class="bg-light-subtle">
-                                        <tr>
-                                            <th class="ps-3" style="width: 50px;">
-                                                <input type="checkbox" class="form-check-input" id="customCheck1">
-                                            </th>
-                                            <th>Doctor ID</th>
-                                            <th>Doctor Name</th>
-                                            <th>Specialty</th>
-                                            <th>Phone Number</th>
-                                            <th>Email</th>
-                                            <th>Timing</th>
-                                            <th>Years of Experience</th>
-                                            <th class="text-center" style="width: 120px;">Action</th>
-                                        </tr>
-                                    </thead><!-- end thead -->
+                        </div>
 
-                                    <tbody>
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck2">
-                                            </td>
-                                            <td>DR0001</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-3.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. James D. Roger</a>
-                                            </td>
-                                            <td>Cardiology</td>
-                                            <td>
-                                                +96 303-975-3491
-                                            </td>
-                                            <td>
-                                                jamesdroger@armyspy.com
-                                            </td>
-                                            <td>
-                                                Mon-Fri: 9 AM - 5 PM
-                                            </td>
-                                            <td>
-                                                14 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                        <div class="chat-content card rounded-0 shadow-none mb-0">
+                            <div class="card-header py-2 px-3 border-bottom">
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center gap-2">
 
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck3">
-                                            </td>
-                                            <td>DR0002</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-2.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Morgan H. Beck</a>
+                                        <a href="#" class="btn btn-sm btn-icon btn-soft-primary d-none d-xl-flex me-2"
+                                            data-bs-toggle="collapse" data-bs-target="#chat-user-list"
+                                            aria-expanded="true">
+                                            <i class="ti ti-chevrons-left fs-20"></i>
+                                        </a>
 
-                                            </td>
-                                            <td>Dermatology</td>
-                                            <td>
-                                                +56 408-272-5403
-                                            </td>
-                                            <td>
-                                                morganhbeck@rhyta.com
-                                            </td>
-                                            <td>
-                                                Mon-Fri: 10 AM - 6 PM
-                                            </td>
-                                            <td>
-                                                09 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        <button class="btn btn-sm btn-icon btn-ghost-light text-dark d-xl-none d-flex"
+                                            type="button" data-bs-toggle="offcanvas" data-bs-target="#chatUserList"
+                                            aria-controls="chatUserList">
+                                            <i class="ti ti-menu-2 fs-20"></i>
+                                        </button>
 
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck4">
-                                            </td>
-                                            <td>DR0003</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-4.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Terry J. Bowers</a>
-                                            </td>
-                                            <td>Pediatrics</td>
-                                            <td>
-                                                +92 845-693-5084
-                                            </td>
-                                            <td>
-                                                terryjbowers@teleworm.us
-                                            </td>
-                                            <td>
-                                                Tue-Sat: 8 AM - 4 PM
-                                            </td>
-                                            <td>
-                                                12 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        <img src="assets/images/users/avatar-5.jpg" class="avatar-lg rounded-circle"
+                                            alt="">
 
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck5">
-                                            </td>
-                                            <td>DR0004</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-5.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Carlos McCollum</a>
-                                            </td>
-                                            <td>Orthopedics</td>
-                                            <td>
-                                                +68 036961 83 22
-                                            </td>
-                                            <td>
-                                                carloslmccollum@rhyta.com
-                                            </td>
-                                            <td>
-                                                Mon-Thu: 9 AM - 5 PM
-                                            </td>
-                                            <td>
-                                                17 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                        <div>
+                                            <h5 class="my-0 lh-base">
+                                                <a href="#" class="text-reset">James Zavel</a>
+                                            </h5>
+                                            <p class="mb-0 text-muted">
+                                                <small class="ti ti-circle-filled text-success"></small> Active
+                                            </p>
+                                        </div>
+                                    </div>
 
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck6">
-                                            </td>
-                                            <td>DR0005</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-6.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Jeanetta D. Hovey</a>
-                                            </td>
-                                            <td>Neurology</td>
-                                            <td>
-                                                +62 0951 29 41 23
-                                            </td>
-                                            <td>
-                                                jeanettadhovey@jourrapide.com
-                                            </td>
-                                            <td>
-                                                Wed-Sat: 1 PM - 9 PM
-                                            </td>
-                                            <td>
-                                                10 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-sm btn-icon btn-ghost-light d-none d-xl-flex"
+                                            data-bs-toggle="modal" data-bs-target="#userCall" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" title="Voice Call">
+                                            <i class="ti ti-phone-call fs-20"></i>
+                                        </a>
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-sm btn-icon btn-ghost-light d-none d-xl-flex"
+                                            data-bs-toggle="modal" data-bs-target="#userVideoCall"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Video Call">
+                                            <i class="ti ti-video fs-20"></i>
+                                        </a>
 
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck7">
-                                            </td>
-                                            <td>DR0006</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-7.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Erma D. Coffman</a>
-                                            </td>
-                                            <td>Gastroenterology</td>
-                                            <td>
-                                                +44 06588 19 07 95
-                                            </td>
-                                            <td>
-                                                ermadcoffman@jourrapide.com
-                                            </td>
-                                            <td>
-                                                Mon-Sat: 6 AM - 2 PM
-                                            </td>
-                                            <td>
-                                                06 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck8">
-                                            </td>
-                                            <td>DR0007</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-8.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Dorian T. Lackey</a>
-                                            </td>
-                                            <td>Oncology</td>
-                                            <td>
-                                                +41 02161 72 22 77
-                                            </td>
-                                            <td>
-                                                doriantlackey@teleworm.us
-                                            </td>
-                                            <td>
-                                                Fri-Sun: 9 AM - 5 PM
-                                            </td>
-                                            <td>
-                                                04 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck9">
-                                            </td>
-                                            <td>DR0008</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-9.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Kelli H. Bailey</a>
-                                            </td>
-                                            <td>Psychiatry</td>
-                                            <td>
-                                                +99 073 38 56 39
-                                            </td>
-                                            <td>
-                                                kelligbailey@rhyta.com
-                                            </td>
-                                            <td>
-                                                Mon-Fri: 8 AM - 4 PM
-                                            </td>
-                                            <td>
-                                                12 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck10">
-                                            </td>
-                                            <td>DR0009</td>
-                                            <td>
-                                                <img src="assets/images/users/avatar-10.jpg"
-                                                    class="avatar-sm rounded-circle me-2" alt="...">
-                                                <a href="apps-hospital-doctor-details.html"
-                                                    class="text-dark fw-medium">Dr. Robert A. Camp </a>
-                                            </td>
-                                            <td>Endocrinology</td>
-                                            <td>
-                                                +9 08684 81 00 91
-                                            </td>
-                                            <td>
-                                                robertacampbell@armyspy.com
-                                            </td>
-                                            <td>
-                                                Tue-Sat: 9 AM - 5 PM
-                                            </td>
-                                            <td>
-                                                19 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="ps-3">
-                                                <input type="checkbox" class="form-check-input" id="customCheck11">
-                                            </td>
-                                            <td>DR00010</td>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-2">
-                                                    <div class="avatar avatar-sm">
-                                                        <span class="avatar-title bg-warning rounded-circle fw-bold">
-                                                            J
-                                                        </span>
-                                                    </div>
-                                                    <a href="apps-hospital-doctor-details.html"
-                                                        class="text-dark fw-medium">Dr. Jewel B. Odom</a>
-                                                </div>
-                                            </td>
-                                            <td>Ophthalmology</td>
-                                            <td>
-                                                +41 0451 67 15 47
-                                            </td>
-                                            <td>
-                                                jewelbodom@armyspy.com
-                                            </td>
-                                            <td>
-                                                Mon-Thu: 10 AM - 6 PM
-                                            </td>
-                                            <td>
-                                                03 Years
-                                            </td>
-                                            <td class="pe-3">
-                                                <div class="hstack gap-1 justify-content-end">
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-eye"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-edit fs-16"></i></a>
-                                                    <a href="javascript:void(0);"
-                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
-                                                            class="ti ti-trash"></i></a>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                    </tbody><!-- end tbody -->
-                                </table><!-- end table -->
+                                        <a href="javascript: void(0);"
+                                            class="btn btn-sm btn-icon btn-ghost-light d-xl-flex">
+                                            <i class="ti ti-info-circle fs-20"></i>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-end">
-                                    <ul class="pagination mb-0">
-                                        <li class="page-item disabled">
-                                            <a href="#" class="page-link"><i class="ti ti-chevrons-left"></i></a>
+
+                            <div>
+                                <div class="chat-scroll p-3" data-simplebar>
+                                    <ul class="chat-list" data-apps-chat="messages-list">
+                                        <li class="chat-group" id="even-1">
+                                            <img src="assets/images/users/avatar-5.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-5" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">James.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:04pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Hello! 👋</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link link-reset"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#even-1"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="page-item">
-                                            <a href="#" class="page-link">1</a>
+
+                                        <li class="chat-group odd" id="odd-1">
+                                            <img src="assets/images/users/avatar-1.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-1" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">You.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:05pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Hey there, how are you doing? Any plans for our upcoming meeting?
+                                                    </p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#odd-1"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="page-item active">
-                                            <a href="#" class="page-link">2</a>
+
+                                        <li class="chat-group" id="even-2">
+                                            <img src="assets/images/users/avatar-5.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-5" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">James.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:08pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Sure, everything's good.</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link link-reset"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#even-2"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="page-item">
-                                            <a href="#" class="page-link">3</a>
+
+                                        <li class="chat-group odd" id="odd-2">
+                                            <img src="assets/images/users/avatar-1.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-1" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">You.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:10pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Fantastic! 👍</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#odd-2"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
-                                        <li class="page-item">
-                                            <a href="#" class="page-link"><i class="ti ti-chevrons-right"></i></a>
+
+                                        <li class="chat-group" id="even-3">
+                                            <img src="assets/images/users/avatar-5.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-5" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">James.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:15pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>If you're available, let's schedule it for today.</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link link-reset"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#even-3"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="chat-group odd" id="odd-3">
+                                            <img src="assets/images/users/avatar-1.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-1" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">You.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:16pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Absolutely! Just give me a heads up if 2pm suits you.</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#odd-3"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="chat-group" id="even-4">
+                                            <img src="assets/images/users/avatar-5.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-5" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">James.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:18pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>Apologies 😔, I've got another meeting at 2pm. Could we possibly
+                                                        shift it to 3pm?</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link link-reset"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#even-4"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-message" id="even-4-1">
+                                                    <p>If you have a few extra minutes, we could also go over the
+                                                        presentation talk format.</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link link-reset"
+                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#even-4-1"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="chat-group odd" id="odd-4">
+                                            <img src="assets/images/users/avatar-1.jpg" class="avatar-sm rounded-circle"
+                                                alt="avatar-1" />
+
+                                            <div class="chat-body">
+                                                <div>
+                                                    <h6 class="d-inline-flex">You.</h6>
+                                                    <h6 class="d-inline-flex text-muted">10:19pm</h6>
+                                                </div>
+
+                                                <div class="chat-message">
+                                                    <p>3pm works for me 👍. Absolutely, let's dive into the presentation
+                                                        format. It'd be fantastic to wrap that up today. I'm attaching
+                                                        last year's format and assets here for reference.</p>
+
+                                                    <div class="chat-actions dropdown">
+                                                        <button class="btn btn-sm btn-link" data-bs-toggle="dropdown"
+                                                            aria-expanded="false">
+                                                            <i class="ti ti-dots-vertical"></i>
+                                                        </button>
+
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-copy fs-14 align-text-top me-1"></i>
+                                                                Copy Message</a>
+                                                            <a class="dropdown-item" href="#"><i
+                                                                    class="ti ti-edit-circle fs-14 align-text-top me-1"></i>
+                                                                Edit</a>
+                                                            <a class="dropdown-item" href="#"
+                                                                data-dismissible="#odd-4"><i
+                                                                    class="ti ti-trash fs-14 align-text-top me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
+                                </div>
+
+                                <div class="p-3 border-top position-sticky bottom-0 w-100 mb-0">
+                                    <form class="row align-items-center g-2" name="chat-form" id="chat-form">
+
+                                        <div class="col-auto">
+                                            <button type="button" class="btn btn-icon btn-soft-warning">
+                                                <iconify-icon icon="solar:smile-circle-outline"
+                                                    class="fs-20"></iconify-icon>
+                                            </button>
+                                        </div>
+
+                                        <div class="col">
+                                            <input type="text" name="message" class="form-control"
+                                                placeholder="Type Message..." required>
+                                        </div>
+
+                                        <div class="col-sm-auto">
+                                            <div class="d-flex align-items-center gap-1">
+                                                <button type="submit" class="btn btn-icon btn-success"><i
+                                                        class='ti ti-send'></i></button>
+                                                <a href="#" class="btn btn-icon btn-soft-primary"><i
+                                                        class="ti ti-microphone"></i> </a>
+                                                <a href="#" class="btn btn-icon btn-soft-primary"><i
+                                                        class="ti ti-paperclip"></i></a>
+                                            </div>
+                                        </div> <!-- end col -->
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -1745,6 +2066,6 @@
 </body>
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/apps-hospital-doctors.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:45 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-chat.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:33 GMT -->
 
 </html>
