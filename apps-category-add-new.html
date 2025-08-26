@@ -821,6 +821,118 @@
                     </div>
                 </div>
 
+                <!-- Category Form Data -->
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="card">
+                            <div class="card-header border-bottom border-dashed">
+                                <h4 class="card-title">Add Category</h4>
+                                <p class="text-muted mb-0">
+                                    Add a new menu category for your restaurant POS system. Categories help organize
+                                    menu items for quick ordering and efficient management.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <form id="addCategoryForm">
+                                    <div class="row">
+                                        <!-- Category Name -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="categoryName" class="form-label">Category Name <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="categoryName"
+                                                    placeholder="e.g. Starters, Main Course" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- Parent Category -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="parentCategory" class="form-label">Parent Category</label>
+                                                <select class="form-select" id="parentCategory">
+                                                    <option selected>Select Parent Category</option>
+                                                    <option>None (Top-Level)</option>
+                                                    <option>Starters</option>
+                                                    <option>Main Course</option>
+                                                    <option>Beverages</option>
+                                                    <option>Desserts</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Description -->
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label for="categoryDescription" class="form-label">Description</label>
+                                                <textarea class="form-control" id="categoryDescription" rows="3"
+                                                    placeholder="Short description about this category (optional)"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- Status -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="categoryStatus" class="form-label">Status</label>
+                                                <select class="form-select" id="categoryStatus">
+                                                    <option selected>Active</option>
+                                                    <option>Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Visibility -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="categoryVisibility" class="form-label">Visibility</label>
+                                                <select class="form-select" id="categoryVisibility">
+                                                    <option selected>Visible</option>
+                                                    <option>Hidden</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sort Order -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="sortOrder" class="form-label">Sort Order</label>
+                                                <input type="number" class="form-control" id="sortOrder"
+                                                    placeholder="e.g. 1" min="1">
+                                            </div>
+                                        </div>
+
+                                        <!-- Upload Category Image -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="categoryImage" class="form-label">Category Image</label>
+                                                <input class="form-control" type="file" id="categoryImage"
+                                                    accept="image/*">
+                                                <small class="text-muted">Recommended size: 200x200px</small>
+                                            </div>
+                                        </div>
+
+                                        <!-- Featured -->
+                                        <div class="col-lg-12">
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="featuredCategory">
+                                                <label class="form-check-label" for="featuredCategory">Mark as Featured
+                                                    Category</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Add Category Button -->
+                                        <div class="col-lg-12 text-end">
+                                            <button type="submit" class="btn btn-primary px-4">
+                                                <i class="ti ti-plus me-1"></i> Add Category
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <!-- end row -->
 
             </div> <!-- container -->

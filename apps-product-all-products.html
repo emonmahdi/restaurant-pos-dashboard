@@ -821,7 +821,216 @@
                     </div>
                 </div>
 
-                <!-- end row -->
+                <!-- All Products Data -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- Header -->
+                            <div
+                                class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
+                                <h4 class="header-title mb-0">Product List</h4>
+                                <div>
+                                    <a href="apps-prodcut-add-new.html" class="btn btn-success bg-gradient">
+                                        <i class="ti ti-plus me-1"></i> Add Product
+                                    </a>
+                                    <a href="#" class="btn btn-secondary bg-gradient">
+                                        <i class="ti ti-file-import me-1"></i> Import
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-nowrap mb-0">
+                                    <thead class="bg-light-subtle">
+                                        <tr>
+                                            <th class="ps-3" style="width: 50px;">
+                                                <input type="checkbox" class="form-check-input" id="selectAllProducts">
+                                            </th>
+                                            <th>Image</th>
+                                            <th>Product ID</th>
+                                            <th>Product Name</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                            <th>Visibility</th>
+                                            <th>Featured</th>
+                                            <th class="text-center" style="width: 150px;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Product Row 1 -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input">
+                                            </td>
+                                            <td>
+                                                <img src="assets/images/products/pizza.jpg" alt="Margherita Pizza"
+                                                    class="img-thumbnail"
+                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>PRD001</td>
+                                            <td><span class="text-dark fw-medium">Margherita Pizza</span></td>
+                                            <td>Main Course</td>
+                                            <td>$9.99</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td><span class="badge bg-primary">Visible</span></td>
+                                            <td><span class="badge bg-warning">Yes</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"
+                                                        title="View">
+                                                        <i class="ti ti-eye"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Product Row 2 -->
+                                        <tr>
+                                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                                            <td>
+                                                <img src="assets/images/products/burger.jpg" alt="Cheese Burger"
+                                                    class="img-thumbnail"
+                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>PRD002</td>
+                                            <td><span class="text-dark fw-medium">Cheese Burger</span></td>
+                                            <td>Starters</td>
+                                            <td>$5.49</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td><span class="badge bg-primary">Visible</span></td>
+                                            <td><span class="badge bg-secondary">No</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"
+                                                        title="View">
+                                                        <i class="ti ti-eye"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Product Row 3 -->
+                                        <tr>
+                                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                                            <td>
+                                                <img src="assets/images/products/coffee.jpg" alt="Cappuccino"
+                                                    class="img-thumbnail"
+                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>PRD003</td>
+                                            <td><span class="text-dark fw-medium">Cappuccino</span></td>
+                                            <td>Beverages</td>
+                                            <td>$3.99</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td><span class="badge bg-primary">Visible</span></td>
+                                            <td><span class="badge bg-warning">Yes</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"
+                                                        title="View">
+                                                        <i class="ti ti-eye"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <!-- Product Row 4 -->
+                                        <tr>
+                                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                                            <td>
+                                                <img src="assets/images/products/icecream.jpg" alt="Chocolate Ice Cream"
+                                                    class="img-thumbnail"
+                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                            </td>
+                                            <td>PRD004</td>
+                                            <td><span class="text-dark fw-medium">Chocolate Ice Cream</span></td>
+                                            <td>Desserts</td>
+                                            <td>$4.49</td>
+                                            <td><span class="badge bg-success">Available</span></td>
+                                            <td><span class="badge bg-primary">Visible</span></td>
+                                            <td><span class="badge bg-secondary">No</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"
+                                                        title="View">
+                                                        <i class="ti ti-eye"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-end">
+                                    <ul class="pagination mb-0">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div> <!-- container -->
 

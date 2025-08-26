@@ -804,28 +804,99 @@
 
             <div class="page-container">
 
-
-                <div class="page-container">
-
-
-                    <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
-                        <div class="flex-grow-1">
-                            <h4 class="fs-18 fw-semibold mb-0">Waiter</h4>
-                        </div>
-
-                        <div class="text-end">
-                            <ol class="breadcrumb m-0 py-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-
-                                <li class="breadcrumb-item active">Waiter</li>
-                            </ol>
-                        </div>
+                <!-- Page Title and Breadcrumb -->
+                <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+                    <div class="flex-grow-1">
+                        <h4 class="fs-18 fw-semibold mb-0">
+                            <i class="ti ti-user-check me-2"></i> Waiter Management
+                        </h4>
+                        <p class="text-muted mb-0">Manage and assign waiters for your restaurant service.</p>
                     </div>
 
-
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Waiter</li>
+                        </ol>
+                    </div>
                 </div>
 
+                <!-- Waiter Management Card -->
+                <div class="card mt-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="ti ti-users me-2"></i> All Waiters</h5>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="ti ti-plus me-1"></i> Add New Waiter
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Search and Filter -->
+                        <div class="d-flex align-items-center mb-3 gap-3 flex-wrap">
+
+                            <!-- Search Box -->
+                            <div class="flex-grow-1" style="max-width: 400px;">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="ti ti-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Search waiter...">
+                                </div>
+                            </div>
+
+                            <!-- Filter Dropdown -->
+                            <div style="min-width: 180px;">
+                                <select class="form-select">
+                                    <option value="">Filter by Status</option>
+                                    <option value="active">Active</option>
+                                    <option value="inactive">Inactive</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Waiter Table -->
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th><i class="ti ti-user"></i> Name</th>
+                                        <th><i class="ti ti-mail"></i> Email</th>
+                                        <th><i class="ti ti-phone"></i> Phone</th>
+                                        <th><i class="ti ti-check"></i> Status</th>
+                                        <th class="text-end"><i class="ti ti-settings"></i> Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Rahim Uddin</td>
+                                        <td>rahim@example.com</td>
+                                        <td>+8801712345678</td>
+                                        <td><span class="badge bg-success">Active</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-warning"><i class="ti ti-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="ti ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Karim Hossain</td>
+                                        <td>karim@example.com</td>
+                                        <td>+8801812345678</td>
+                                        <td><span class="badge bg-danger">Inactive</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-warning"><i class="ti ti-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="ti ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Footer Start -->
             <footer class="footer">

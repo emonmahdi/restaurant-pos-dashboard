@@ -804,28 +804,110 @@
 
             <div class="page-container">
 
-
-                <div class="page-container">
-
-
-                    <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
-                        <div class="flex-grow-1">
-                            <h4 class="fs-18 fw-semibold mb-0">Income</h4>
-                        </div>
-
-                        <div class="text-end">
-                            <ol class="breadcrumb m-0 py-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-
-                                <li class="breadcrumb-item active">Income</li>
-                            </ol>
-                        </div>
+                <!-- Page Title and Breadcrumb -->
+                <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+                    <div class="flex-grow-1">
+                        <h4 class="fs-18 fw-semibold mb-0">
+                            <i class="ti ti-cash me-2"></i> Income Management
+                        </h4>
+                        <p class="text-muted mb-0">Track and manage all incoming revenues for your restaurant.</p>
                     </div>
 
-
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Income</li>
+                        </ol>
+                    </div>
                 </div>
 
+                <!-- Income Management Card -->
+                <div class="card mt-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0"><i class="ti ti-wallet me-2"></i> All Incomes</h5>
+                        <button class="btn btn-primary btn-sm">
+                            <i class="ti ti-plus me-1"></i> Add New Income
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Search and Filter -->
+                        <div class="d-flex align-items-center mb-3 gap-3 flex-wrap">
+                            <div class="flex-grow-1" style="max-width: 400px;">
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="ti ti-search"></i></span>
+                                    <input type="text" class="form-control" placeholder="Search income item...">
+                                </div>
+                            </div>
+                            <div style="min-width: 180px;">
+                                <select class="form-select">
+                                    <option value="">Filter by Type</option>
+                                    <option value="sales">Sales</option>
+                                    <option value="online-orders">Online Orders</option>
+                                    <option value="events">Events</option>
+                                    <option value="misc">Miscellaneous</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Income Table -->
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th><i class="ti ti-package"></i> Source</th>
+                                        <th><i class="ti ti-category"></i> Type</th>
+                                        <th><i class="ti ti-currency-dollar"></i> Amount</th>
+                                        <th><i class="ti ti-calendar"></i> Date</th>
+                                        <th><i class="ti ti-check"></i> Status</th>
+                                        <th class="text-end"><i class="ti ti-settings"></i> Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Table Orders</td>
+                                        <td>Sales</td>
+                                        <td>$320</td>
+                                        <td>25 Aug 2025</td>
+                                        <td><span class="badge bg-success">Received</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-warning"><i class="ti ti-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="ti ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Online Orders</td>
+                                        <td>Online Orders</td>
+                                        <td>$210</td>
+                                        <td>25 Aug 2025</td>
+                                        <td><span class="badge bg-success">Received</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-warning"><i class="ti ti-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="ti ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Birthday Event</td>
+                                        <td>Events</td>
+                                        <td>$150</td>
+                                        <td>24 Aug 2025</td>
+                                        <td><span class="badge bg-warning">Pending</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-warning"><i class="ti ti-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger"><i class="ti ti-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+
 
             <!-- Footer Start -->
             <footer class="footer">

@@ -804,28 +804,91 @@
 
             <div class="page-container">
 
-
-                <div class="page-container">
-
-
-                    <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
-                        <div class="flex-grow-1">
+                <!-- Page Header -->
+                <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="menu-icon bg-light p-2 rounded-circle">
+                            <i class="ti ti-package-off fs-20 text-danger"></i>
+                        </span>
+                        <div>
                             <h4 class="fs-18 fw-semibold mb-0">Stock Out</h4>
-                        </div>
-
-                        <div class="text-end">
-                            <ol class="breadcrumb m-0 py-0">
-                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
-
-                                <li class="breadcrumb-item active">Stock Out</li>
-                            </ol>
+                            <p class="text-muted mb-0 fs-13">Manage products that are out of stock</p>
                         </div>
                     </div>
 
-
+                    <div class="text-end ms-auto">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Stock Out</li>
+                        </ol>
+                    </div>
                 </div>
 
-            </div> <!-- container -->
+                <!-- Stock Out Content -->
+                <div class="card mt-4 shadow-sm">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">Stock Out Items</h5>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="ti ti-plus"></i> Add New
+                        </button>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Item Name</th>
+                                        <th>Category</th>
+                                        <th>Quantity</th>
+                                        <th>Last Updated</th>
+                                        <th>Status</th>
+                                        <th class="text-end">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Chicken Breast</td>
+                                        <td>Meat</td>
+                                        <td>0</td>
+                                        <td>25 Aug 2025</td>
+                                        <td><span class="badge bg-danger">Out of Stock</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="ti ti-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="ti ti-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>French Fries</td>
+                                        <td>Snacks</td>
+                                        <td>0</td>
+                                        <td>24 Aug 2025</td>
+                                        <td><span class="badge bg-danger">Out of Stock</span></td>
+                                        <td class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="ti ti-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="ti ti-trash"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <!-- More rows -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
 
             <!-- Footer Start -->
             <footer class="footer">
