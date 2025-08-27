@@ -2,17 +2,19 @@
 <html lang="en">
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:25:10 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-invoices.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:27:16 GMT -->
 
 <head>
     <meta charset="utf-8" />
-    <title> Restaurant POS Dashboard </title>
+    <title>Invoices | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
 
     <!-- App favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <link href="assets/vendor/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Theme Config Js -->
     <script src="assets/js/config.js"></script>
@@ -66,179 +68,134 @@
                     <li class="side-nav-item">
                         <a href="index.html" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-dashboard"></i></span>
-                            <span class="menu-text"> Dashboard </span>
+                            <span class="menu-text"> Sales </span>
                             <span class="badge bg-success rounded-pill">5</span>
                         </a>
                     </li>
 
+                    <li class="side-nav-item">
+                        <a href="dashboard-clinic.html" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-building-hospital"></i></span>
+                            <span class="menu-text"> Clinic </span>
+                        </a>
+                    </li>
 
-                    <!-- Category -->
                     <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#posCategory" aria-expanded="false"
-                            aria-controls="posCategory" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
-                            <span class="menu-text"> Category</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="posCategory">
-                            <ul class="sub-menu">
-                                <li class="side-nav-item">
-                                    <a href="apps-category-all-category.html" class="side-nav-link">
-                                        <span class="menu-text">All Category </span>
-                                    </a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a href="apps-category-add-new.html" class="side-nav-link">
-                                        <span class="menu-text">Add New Category</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Product -->
-                    <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#posProduct" aria-expanded="false" aria-controls="posProduct"
-                            class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
-                            <span class="menu-text"> Product</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="posProduct">
-                            <ul class="sub-menu">
-                                <li class="side-nav-item">
-                                    <a href="apps-product-all-products.html" class="side-nav-link">
-                                        <span class="menu-text">All Product</span>
-                                    </a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a href="apps-prodcut-add-new.html" class="side-nav-link">
-                                        <span class="menu-text">Add New Product</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Supplier -->
-                    <li class="side-nav-item">
-                        <a href="apps-supplier.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Supplier </span>
+                        <a href="dashboard-wallet.html" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-wallet"></i></span>
+                            <span class="menu-text"> eWallet </span>
+                            <span class="badge p-0 menu-alert fs-16 text-danger">
+                                <i class="ti ti-info-triangle" data-bs-html="true" data-bs-toggle="tooltip"
+                                    data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+                                    data-bs-title="Your wallet balance is <b>low!</b>"></i>
+                            </span>
                         </a>
                     </li>
-                    <!-- Stock -->
-                    <li class="side-nav-item">
-                        <a href="apps-stock.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Stock </span>
-                        </a>
-                    </li>
-                    <!-- Stock Out-->
-                    <li class="side-nav-item">
-                        <a href="apps-stock-out.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Stock Out </span>
-                        </a>
-                    </li>
-                    <!-- Sales-->
-                    <li class="side-nav-item">
-                        <a href="apps-sales.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Sales </span>
-                        </a>
-                    </li>
-                    <!-- Table-->
-                    <li class="side-nav-item">
-                        <a href="apps-table.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Table </span>
-                        </a>
-                    </li>
-                    <!-- Waiter-->
-                    <li class="side-nav-item">
-                        <a href="apps-waiter.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Waiter </span>
-                        </a>
-                    </li>
-                    <!-- Costs -->
-                    <li class="side-nav-item">
-                        <a data-bs-toggle="collapse" href="#sidebarInvoice" aria-expanded="false"
-                            aria-controls="sidebarInvoice" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-file-invoice"></i></span>
-                            <span class="menu-text"> Costs</span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                        <div class="collapse" id="sidebarInvoice">
-                            <ul class="sub-menu">
-                                <li class="side-nav-item">
-                                    <a href="apps-cost-category.html" class="side-nav-link">
-                                        <span class="menu-text">Cost Category</span>
-                                    </a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a href="apps-cost-field-of-cost.html" class="side-nav-link">
-                                        <span class="menu-text">Field Of Cost</span>
-                                    </a>
-                                </li>
-                                <li class="side-nav-item">
-                                    <a href="apps-cost-all-cost.html" class="side-nav-link">
-                                        <span class="menu-text">All Cost</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <!-- Income-->
-                    <li class="side-nav-item">
-                        <a href="apps-income.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Income </span>
-                        </a>
-                    </li>
-                    <!-- Payroll-->
-                    <li class="side-nav-item">
-                        <a href="apps-payroll.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Payroll </span>
-                        </a>
-                    </li>
-                    <!-- Reports-->
-                    <li class="side-nav-item">
-                        <a href="apps-reports.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Reports </span>
-                        </a>
-                    </li>
-                    <!-- Settings-->
-                    <li class="side-nav-item">
-                        <a href="apps-settings.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> Settings </span>
-                        </a>
-                    </li>
-                    <!-- SMS-->
-                    <li class="side-nav-item">
-                        <a href="apps-sms.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> SMS </span>
-                        </a>
-                    </li>
-                    <!-- User Management-->
-                    <li class="side-nav-item">
-                        <a href="apps-user-management.html" class="side-nav-link">
-                            <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text"> User Management </span>
-                        </a>
-                    </li>
-                    <!-- User Management-->
+
+                    <li class="side-nav-title mt-2">Apps & Pages</li>
+
                     <li class="side-nav-item">
                         <a href="apps-chat.html" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-message"></i></span>
-                            <span class="menu-text">Log Out </span>
+                            <span class="menu-text"> Chat </span>
                         </a>
                     </li>
 
-                    <!-- <li class="side-nav-item">
+                    <li class="side-nav-item">
+                        <a href="apps-calendar.html" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-calendar"></i></span>
+                            <span class="menu-text"> Calendar </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a href="apps-email.html" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-inbox"></i></span>
+                            <span class="menu-text"> Email </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a href="apps-file-manager.html" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-folder"></i></span>
+                            <span class="menu-text"> File Manager </span>
+                        </a>
+                    </li>
+
+                    <li class="side-nav-item">
+                        <a data-bs-toggle="collapse" href="#sidebarHospital" aria-expanded="false"
+                            aria-controls="sidebarHospital" class="side-nav-link">
+                            <span class="menu-icon"><i class="ti ti-medical-cross"></i></span>
+                            <span class="menu-text"> Hospital</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarHospital">
+                            <ul class="sub-menu">
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-doctors.html" class="side-nav-link">
+                                        <span class="menu-text">Doctors</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-doctor-details.html" class="side-nav-link">
+                                        <span class="menu-text">Doctor Details</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-add-doctors.html" class="side-nav-link">
+                                        <span class="menu-text">Add Doctors</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-patients.html" class="side-nav-link">
+                                        <span class="menu-text">Patients</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-patient-details.html" class="side-nav-link">
+                                        <span class="menu-text">Patient Details</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-add-patients.html" class="side-nav-link">
+                                        <span class="menu-text">Add Patients</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-appointments.html" class="side-nav-link">
+                                        <span class="menu-text">Appointments</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-payments.html" class="side-nav-link">
+                                        <span class="menu-text">Payments</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-departments.html" class="side-nav-link">
+                                        <span class="menu-text">Departments</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-reviews.html" class="side-nav-link">
+                                        <span class="menu-text">Reviews</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-contacts.html" class="side-nav-link">
+                                        <span class="menu-text">Hospital Contacts</span>
+                                    </a>
+                                </li>
+                                <li class="side-nav-item">
+                                    <a href="apps-hospital-staffs.html" class="side-nav-link">
+                                        <span class="menu-text">Staffs</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="side-nav-item">
                         <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
                             aria-controls="sidebarEcommerce" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-basket"></i></span>
@@ -300,24 +257,24 @@
                         <a data-bs-toggle="collapse" href="#sidebarInvoice" aria-expanded="false"
                             aria-controls="sidebarInvoice" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-file-invoice"></i></span>
-                            <span class="menu-text"> Invoice</span>
+                            <span class="menu-text"> Costs</span>
                             <span class="menu-arrow"></span>
                         </a>
                         <div class="collapse" id="sidebarInvoice">
                             <ul class="sub-menu">
                                 <li class="side-nav-item">
-                                    <a href="apps-invoices.html" class="side-nav-link">
-                                        <span class="menu-text">Invoices</span>
+                                    <a href="apps-category-add-new.html" class="side-nav-link">
+                                        <span class="menu-text">Cost Category</span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a href="apps-invoice-details.html" class="side-nav-link">
-                                        <span class="menu-text">View Invoice</span>
+                                    <a href="#" class="side-nav-link">
+                                        <span class="menu-text">Field of Cost</span>
                                     </a>
                                 </li>
                                 <li class="side-nav-item">
-                                    <a href="apps-invoice-create.html" class="side-nav-link">
-                                        <span class="menu-text">Create Invoice</span>
+                                    <a href="#" class="side-nav-link">
+                                        <span class="menu-text">All Cost</span>
                                     </a>
                                 </li>
                             </ul>
@@ -1070,16 +1027,16 @@
                                 </li>
                             </ul>
                         </div>
-                    </li> -->
+                    </li>
                 </ul>
 
                 <!-- Help Box -->
-                <!-- <div class="help-box text-center">
+                <div class="help-box text-center">
                     <img src="assets/images/coffee-cup.svg" height="90" alt="Helper Icon Image" />
                     <h5 class="mt-3 fw-semibold fs-16">Unlimited Access</h5>
                     <p class="mb-3 text-muted">Upgrade to plan to get access to unlimited reports</p>
                     <a href="javascript: void(0);" class="btn btn-danger btn-sm">Upgrade</a>
-                </div> -->
+                </div>
 
                 <div class="clearfix"></div>
             </div>
@@ -1095,15 +1052,13 @@
                     <!-- Brand Logo -->
                     <a href="index.html" class="logo">
                         <span class="logo-light">
-                            <span class="logo-lg">Restaurant POS</span>
-                            <!-- <span class="logo-lg"><img src="assets/images/logo.png" alt="logo"></span> -->
-                            <span class="logo-sm">Restaurant POS</span>
-                            <!-- <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span> -->
+                            <span class="logo-lg"><img src="assets/images/logo.png" alt="logo"></span>
+                            <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span>
                         </span>
 
                         <span class="logo-dark">
-                            <!-- <span class="logo-lg"><img src="assets/images/logo-dark.png" alt="dark logo"></span>
-                            <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span> -->
+                            <span class="logo-lg"><img src="assets/images/logo-dark.png" alt="dark logo"></span>
+                            <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span>
                         </span>
                     </a>
 
@@ -1662,1011 +1617,576 @@
         <!-- Start Page Content here -->
         <!-- ============================================================== -->
         <div class="page-content">
+
             <div class="page-container">
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column">
-                            <div class="flex-grow-1">
-                                <h4 class="fs-18 fw-semibold m-0">Dashboard</h4>
-                            </div>
-                            <div class="mt-3 mt-sm-0">
-                                <form action="javascript:void(0);">
-                                    <div class="row g-2 mb-0 align-items-center">
-                                        <div class="col-auto">
-                                            <a href="javascript: void(0);" class="btn btn-light">
-                                                <i class="ti ti-sort-ascending me-1"></i> Sort By
-                                            </a>
-                                        </div>
-                                        <!--end col-->
-                                        <div class="col-sm-auto">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control border-0 shadow"
-                                                    data-provider="flatpickr" data-deafult-date="01 May to 31 May"
-                                                    data-date-format="d M" data-range-date="true">
-                                                <span class="input-group-text bg-primary border-primary text-white">
-                                                    <i class="ti ti-calendar fs-15"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <!--end col-->
-                                    </div>
-                                    <!--end row-->
-                                </form>
-                            </div>
-                        </div><!-- end card header -->
+
+                <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
+                    <div class="flex-grow-1">
+                        <h4 class="fs-18 fw-semibold mb-0">Invoices</h4>
                     </div>
-                    <!--end col-->
-                </div> <!-- end row-->
 
-                <div class="row">
-                    <div class="col">
-                        <div class="row row-cols-xxl-4 row-cols-md-2 row-cols-1 text-center">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Total
-                                            Orders</h5>
-                                        <div class="d-flex align-items-center justify-content-center gap-2 my-2 py-1">
-                                            <div class="user-img fs-42 flex-shrink-0">
-                                                <span class="avatar-title text-bg-primary rounded-circle fs-22">
-                                                    <iconify-icon
-                                                        icon="solar:case-round-minimalistic-bold-duotone"></iconify-icon>
-                                                </span>
-                                            </div>
-                                            <h3 class="mb-0 fw-bold">687.3k</h3>
+                    <div class="text-end">
+                        <ol class="breadcrumb m-0 py-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Osen</a></li>
+
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Invoice</a></li>
+
+                            <li class="breadcrumb-item active">Invoices</li>
+                        </ol>
+                    </div>
+                </div>
+
+
+
+
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="row row-cols-xxl-5 row-cols-md-3 row-cols-1 g-0 text-center align-items-center">
+                            <div class="col border-end border-light border-dashed">
+                                <div class="mt-3 mt-md-0 p-3">
+                                    <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">No.of Clients
+                                    </h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span
+                                                class="avatar-title bg-secondary-subtle text-secondary rounded-circle fs-22">
+                                                <iconify-icon
+                                                    icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
+                                            </span>
                                         </div>
-                                        <p class="mb-0 text-muted">
-                                            <span class="text-danger me-2"><i class="ti ti-caret-down-filled"></i>
-                                                9.19%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <h3 class="mb-0 fw-bold">9,458</h3>
                                     </div>
+                                    <p class="mb-0 text-muted">
+                                        <span class="text-danger me-2"><i class="ti ti-caret-down-filled"></i>
+                                            6.15%</span>
+                                        <span class="text-nowrap">Since last month</span>
+                                    </p>
                                 </div>
                             </div><!-- end col -->
-
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Total
-                                            Returns</h5>
-                                        <div class="d-flex align-items-center justify-content-center gap-2 my-2 py-1">
-                                            <div class="user-img fs-42 flex-shrink-0">
-                                                <span class="avatar-title text-bg-primary rounded-circle fs-22">
-                                                    <iconify-icon icon="solar:bill-list-bold-duotone"></iconify-icon>
-                                                </span>
-                                            </div>
-                                            <h3 class="mb-0 fw-bold">9.62k</h3>
+                            <div class="col border-end border-light border-dashed">
+                                <div class="mt-3 mt-md-0 p-3">
+                                    <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">No. of Invoices
+                                    </h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span
+                                                class="avatar-title bg-primary-subtle text-primary rounded-circle fs-22">
+                                                <iconify-icon icon="solar:bill-list-bold-duotone"></iconify-icon>
+                                            </span>
                                         </div>
-                                        <p class="mb-0 text-muted">
-                                            <span class="text-success me-2"><i class="ti ti-caret-up-filled"></i>
-                                                26.87%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <h3 class="mb-0 fw-bold">16.75k</h3>
                                     </div>
+                                    <p class="mb-0 text-muted">
+                                        <span class="text-success me-2"><i class="ti ti-caret-up-filled"></i>
+                                            26.87%</span>
+                                        <span class="text-nowrap">Since last month</span>
+                                    </p>
                                 </div>
                             </div><!-- end col -->
-
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Avg. Sales
-                                            Earnings</h5>
-                                        <div class="d-flex align-items-center justify-content-center gap-2 my-2 py-1">
-                                            <div class="user-img fs-42 flex-shrink-0">
-                                                <span class="avatar-title text-bg-primary rounded-circle fs-22">
-                                                    <iconify-icon icon="solar:wallet-money-bold-duotone"></iconify-icon>
-                                                </span>
-                                            </div>
-                                            <h3 class="mb-0 fw-bold">$98.24 <small class="text-muted">USD</small></h3>
+                            <div class="col border-end border-light border-dashed">
+                                <div class="mt-3 mt-md-0 p-3">
+                                    <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Paid by Clients
+                                    </h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span
+                                                class="avatar-title bg-warning-subtle text-warning rounded-circle fs-22">
+                                                <iconify-icon icon="solar:wallet-money-bold-duotone"></iconify-icon>
+                                            </span>
                                         </div>
-                                        <p class="mb-0 text-muted">
-                                            <span class="text-success me-2"><i class="ti ti-caret-up-filled"></i>
-                                                3.51%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <h3 class="mb-0 fw-bold">$98.24k</h3>
                                     </div>
+                                    <p class="mb-0 text-muted">
+                                        <span class="text-success me-2"><i class="ti ti-caret-up-filled"></i>
+                                            3.51%</span>
+                                        <span class="text-nowrap">Since last month</span>
+                                    </p>
                                 </div>
                             </div><!-- end col -->
-
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Number of
-                                            Visits</h5>
-                                        <div class="d-flex align-items-center justify-content-center gap-2 my-2 py-1">
-                                            <div class="user-img fs-42 flex-shrink-0">
-                                                <span class="avatar-title text-bg-primary rounded-circle fs-22">
-                                                    <iconify-icon icon="solar:eye-bold-duotone"></iconify-icon>
-                                                </span>
-                                            </div>
-                                            <h3 class="mb-0 fw-bold">87.94M</h3>
+                            <div class="col border-end border-light border-dashed">
+                                <div class="mt-3 mt-md-0 p-3">
+                                    <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Pending
+                                        Invoices</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span
+                                                class="avatar-title bg-success-subtle text-success rounded-circle fs-22">
+                                                <iconify-icon icon="solar:banknote-2-bold-duotone"></iconify-icon>
+                                            </span>
                                         </div>
-                                        <p class="mb-0 text-muted">
-                                            <span class="text-danger me-2"><i class="ti ti-caret-down-filled"></i>
-                                                1.05%</span>
-                                            <span class="text-nowrap">Since last month</span>
-                                        </p>
+                                        <h3 class="mb-0 fw-bold">87.94%</h3>
                                     </div>
+                                    <p class="mb-0 text-muted">
+                                        <span class="text-danger me-2"><i class="ti ti-caret-down-filled"></i>
+                                            1.05%</span>
+                                        <span class="text-nowrap">Since last month</span>
+                                    </p>
+                                </div>
+                            </div><!-- end col -->
+                            <div class="col border-end border-light border-dashed">
+                                <div class="mt-3 mt-md-0 p-3">
+                                    <h5 class="text-muted fs-13 text-uppercase" title="Number of Orders">Cancelled
+                                        Invoices</h5>
+                                    <div class="d-flex align-items-center justify-content-center gap-2 my-3">
+                                        <div class="avatar-sm flex-shrink-0">
+                                            <span
+                                                class="avatar-title bg-danger-subtle text-danger rounded-circle fs-22">
+                                                <iconify-icon icon="solar:bill-cross-bold-duotone"></iconify-icon>
+                                            </span>
+                                        </div>
+                                        <h3 class="fw-bold mb-0 ">7.11%</h3>
+                                    </div>
+                                    <p class="mb-0 text-muted">
+                                        <span class="text-success me-2"><i class="ti ti-caret-up-filled"></i>
+                                            0.05%</span>
+                                        <span class="text-nowrap">Since last month</span>
+                                    </p>
                                 </div>
                             </div><!-- end col -->
                         </div><!-- end row -->
+                    </div><!-- end card body -->
+                </div><!-- end card -->
 
-                        <div class="row">
-                            <div class="col-xxl-8">
-                                <div class="card">
-                                    <div class="card-header d-flex justify-content-between align-items-center">
-                                        <h4 class="header-title">Overview</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle drop-arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="ti ti-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                <div class="d-flex flex-wrap flex-lg-nowrap align-items-center gap-2 mb-3">
+                    <div class="d-inline-flex align-items-center gap-2 me-auto">
+                        <h5 class="mb-0 fs-14 text-muted">Last Updated a minute ago</h5>
+                        <a href="#!"><i class="ti ti-refresh align-middle fs-16"></i></a>
+                    </div>
 
-                                    <div class="bg-light bg-opacity-50">
-                                        <div class="row text-center">
-                                            <div class="col-md-3 col-6">
-                                                <p class="text-muted mt-3 mb-1">Revenue</p>
-                                                <h4 class="mb-3">
-                                                    <span
-                                                        class="ti ti-square-rounded-arrow-down text-success me-1"></span>
-                                                    <span>$29.5k</span>
-                                                </h4>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <p class="text-muted mt-3 mb-1">Expenses</p>
-                                                <h4 class="mb-3">
-                                                    <span class="ti ti-square-rounded-arrow-up text-danger me-1"></span>
-                                                    <span>$15.07k</span>
-                                                </h4>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <p class="text-muted mt-3 mb-1">Investment</p>
-                                                <h4 class="mb-3">
-                                                    <span class="ti ti-chart-infographic me-1"></span>
-                                                    <span>$3.6k</span>
-                                                </h4>
-                                            </div>
-                                            <div class="col-md-3 col-6">
-                                                <p class="text-muted mt-3 mb-1">Savings</p>
-                                                <h4 class="mb-3">
-                                                    <span class="ti ti-pig me-1"></span>
-                                                    <span>$6.9k</span>
-                                                </h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="d-inline-flex flex-wrap align-items-center gap-1">
+                        <a href="#!"><img src="assets/images/cards/mastercard.svg" alt="master card img"
+                                height="24"></a>
+                        <a href="#!"><img src="assets/images/cards/visa.svg" alt="vis card img" height="24"></a>
+                        <p class="mb-0">Invoice get paid 3x faster with online payments, <a href="#!"
+                                class="fw-medium">Turn On Payments</a></p>
+                    </div>
+                </div>
 
-                                    <div class="card-body pt-0">
-                                        <div dir="ltr">
-                                            <div id="revenue-chart" class="apex-charts"
-                                                data-colors="#6ac75a,#465dff,#783bff,#f7577e"></div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-
-                            <div class="col-xxl-4">
-                                <div class="card">
-                                    <div
-                                        class="card-header d-flex justify-content-between align-items-center border-bottom border-dashed">
-                                        <h4 class="header-title">Top Traffic by Source</h4>
-                                        <div class="dropdown">
-                                            <a href="#" class="dropdown-toggle drop-arrow-none card-drop p-0"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="ti ti-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <a href="javascript:void(0);" class="dropdown-item">Refresh Report</a>
-                                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body">
-                                        <div id="multiple-radialbar" class="apex-charts"
-                                            data-colors="#465dff,#6ac75a,#783bff,#f7577e"></div>
-
-                                        <div class="row mt-2">
-                                            <div class="col">
-                                                <div class="d-flex justify-content-between align-items-center p-1">
-                                                    <div>
-                                                        <i
-                                                            class="ti ti-circle-filled fs-12 align-middle me-1 text-primary"></i>
-                                                        <span class="align-middle fw-semibold">Direct</span>
-                                                    </div>
-                                                    <span class="fw-semibold text-muted float-end"><i
-                                                            class="ti ti-arrow-badge-down text-danger"></i> 965</span>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between align-items-center p-1">
-                                                    <div>
-                                                        <i
-                                                            class="ti ti-circle-filled fs-12 text-success align-middle me-1"></i>
-                                                        <span class="align-middle fw-semibold">Social</span>
-                                                    </div>
-                                                    <span class="fw-semibold text-muted float-end"><i
-                                                            class="ti ti-arrow-badge-up text-success"></i> 75</span>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="d-flex justify-content-between align-items-center p-1">
-                                                    <div>
-                                                        <i
-                                                            class="ti ti-circle-filled fs-12 text-secondary align-middle me-1"></i>
-                                                        <span class="align-middle fw-semibold"> Marketing</span>
-                                                    </div>
-                                                    <span class="fw-semibold text-muted float-end"><i
-                                                            class="ti ti-arrow-badge-up text-success"></i> 102</span>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between align-items-center p-1">
-                                                    <div>
-                                                        <i
-                                                            class="ti ti-circle-filled fs-12 text-danger align-middle me-1"></i>
-                                                        <span class="align-middle fw-semibold">Affiliates</span>
-                                                    </div>
-                                                    <span class="fw-semibold text-muted float-end"><i
-                                                            class="ti ti-arrow-badge-down text-danger"></i> 96</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-                        </div> <!-- end row-->
-
-                        <div class="row">
-                            <div class="col-xxl-6">
-                                <div class="card">
-                                    <div class="d-flex card-header justify-content-between align-items-center">
-                                        <h4 class="header-title">Brands Listing</h4>
-                                        <a href="javascript:void(0);" class="btn btn-sm btn-light">Add Brand <i
-                                                class="ti ti-plus ms-1"></i></a>
-                                    </div>
-                                    <div class="card-body p-0">
-                                        <div class="bg-light bg-opacity-50 py-1 text-center">
-                                            <p class="m-0"><b>69</b> Active brands out of <span
-                                                    class="fw-medium">102</span></p>
-                                        </div>
-                                        <div class="table-responsive">
-                                            <table
-                                                class="table table-custom table-centered table-sm table-nowrap table-hover mb-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar-md flex-shrink-0 me-2">
-                                                                    <span
-                                                                        class="avatar-title bg-primary-subtle rounded-circle">
-                                                                        <img src="assets/images/products/logo/logo-1.svg"
-                                                                            alt="" height="22">
-                                                                    </span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="text-muted fs-12">Clothing</span>
-                                                                    <br />
-                                                                    <h5 class="fs-14 mt-1">Zaroan - Brazil</h5>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Established</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">Since 2020</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Stores</span> <br />
-                                                            <h5 class="fs-14 mt-1 fw-normal">1.5k</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Products</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">8,950</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Status</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal"><i
-                                                                    class="ti ti-circle-filled fs-12 text-success"></i>
-                                                                Active</h5>
-                                                        </td>
-                                                        <td style="width: 30px;">
-                                                            <div class="dropdown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle text-muted drop-arrow-none card-drop p-0"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="ti ti-dots-vertical"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Refresh Report</a>
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Export Report</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar-md flex-shrink-0 me-2">
-                                                                    <span
-                                                                        class="avatar-title bg-info-subtle rounded-circle">
-                                                                        <img src="assets/images/products/logo/logo-4.svg"
-                                                                            alt="" height="22">
-                                                                    </span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="text-muted fs-12">Clothing</span>
-                                                                    <br />
-                                                                    <h5 class="fs-14 mt-1">Jocky-Johns - USA</h5>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Established</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">Since 1985</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Stores</span> <br />
-                                                            <h5 class="fs-14 mt-1 fw-normal">205</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Products</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">1,258</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Status</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal"><i
-                                                                    class="ti ti-circle-filled fs-12 text-success"></i>
-                                                                Active</h5>
-                                                        </td>
-                                                        <td style="width: 30px;">
-                                                            <div class="dropdown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle text-muted drop-arrow-none card-drop p-0"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="ti ti-dots-vertical"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Refresh Report</a>
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Export Report</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar-md flex-shrink-0 me-2">
-                                                                    <span
-                                                                        class="avatar-title bg-secondary-subtle rounded-circle">
-                                                                        <img src="assets/images/products/logo/logo-5.svg"
-                                                                            alt="" height="22">
-                                                                    </span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="text-muted fs-12">Lifestyle</span>
-                                                                    <br />
-                                                                    <h5 class="fs-14 mt-1">Ginne - India</h5>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Established</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">Since 2001</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Stores</span> <br />
-                                                            <h5 class="fs-14 mt-1 fw-normal">89</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Products</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">338</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Status</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal"><i
-                                                                    class="ti ti-circle-filled fs-12 text-success"></i>
-                                                                Active</h5>
-                                                        </td>
-                                                        <td style="width: 30px;">
-                                                            <div class="dropdown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle text-muted drop-arrow-none card-drop p-0"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="ti ti-dots-vertical"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Refresh Report</a>
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Export Report</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar-md flex-shrink-0 me-2">
-                                                                    <span
-                                                                        class="avatar-title bg-danger-subtle rounded-circle">
-                                                                        <img src="assets/images/products/logo/logo-6.svg"
-                                                                            alt="" height="22">
-                                                                    </span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="text-muted fs-12">Fashion</span> <br />
-                                                                    <h5 class="fs-14 mt-1">DDoen - Brazil</h5>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Established</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">Since 1995</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Stores</span> <br />
-                                                            <h5 class="fs-14 mt-1 fw-normal">650</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Products</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">6,842</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Status</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal"><i
-                                                                    class="ti ti-circle-filled fs-12 text-success"></i>
-                                                                Active</h5>
-                                                        </td>
-                                                        <td style="width: 30px;">
-                                                            <div class="dropdown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle text-muted drop-arrow-none card-drop p-0"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="ti ti-dots-vertical"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Refresh Report</a>
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Export Report</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                    <tr>
-                                                        <td>
-                                                            <div class="d-flex align-items-center">
-                                                                <div class="avatar-md flex-shrink-0 me-2">
-                                                                    <span
-                                                                        class="avatar-title bg-primary-subtle rounded-circle">
-                                                                        <img src="assets/images/products/logo/logo-8.svg"
-                                                                            alt="" height="22">
-                                                                    </span>
-                                                                </div>
-                                                                <div>
-                                                                    <span class="text-muted fs-12">Manufacturing</span>
-                                                                    <br />
-                                                                    <h5 class="fs-14 mt-1">Zoddiak - Canada</h5>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Established</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">Since 1963</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Stores</span> <br />
-                                                            <h5 class="fs-14 mt-1 fw-normal">109</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Products</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal">952</h5>
-                                                        </td>
-                                                        <td>
-                                                            <span class="text-muted fs-12">Status</span>
-                                                            <h5 class="fs-14 mt-1 fw-normal"><i
-                                                                    class="ti ti-circle-filled fs-12 text-success"></i>
-                                                                Active</h5>
-                                                        </td>
-                                                        <td style="width: 30px;">
-                                                            <div class="dropdown">
-                                                                <a href="#"
-                                                                    class="dropdown-toggle text-muted drop-arrow-none card-drop p-0"
-                                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                                    <i class="ti ti-dots-vertical"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Refresh Report</a>
-                                                                    <a href="javascript:void(0);"
-                                                                        class="dropdown-item">Export Report</a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div> <!-- end table-responsive-->
-                                    </div> <!-- end card-body-->
-
-                                    <div class="card-footer">
-                                        <div
-                                            class="align-items-center justify-content-between row text-center text-sm-start">
-                                            <div class="col-sm">
-                                                <div class="text-muted">
-                                                    Showing <span class="fw-semibold">5</span> of <span
-                                                        class="fw-semibold">15</span> Results
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto mt-3 mt-sm-0">
-                                                <ul
-                                                    class="pagination pagination-boxed pagination-sm mb-0 justify-content-center">
-                                                    <li class="page-item disabled">
-                                                        <a href="#" class="page-link"><i
-                                                                class="ti ti-chevron-left"></i></a>
-                                                    </li>
-                                                    <li class="page-item active">
-                                                        <a href="#" class="page-link">1</a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link">2</a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link">3</a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link"><i
-                                                                class="ti ti-chevron-right"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div> <!-- -->
-                                    </div>
-
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-
-                            <div class="col-xxl-6">
-                                <div class="card card-h-100">
-                                    <div
-                                        class="card-header d-flex flex-wrap align-items-center gap-2 border-bottom border-dashed">
-                                        <h4 class="header-title me-auto">Top Selling Products</h4>
-
-                                        <div class="d-flex gap-2 justify-content-end text-end">
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-light">Import <i
-                                                    class="ti ti-download ms-1"></i></a>
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-primary">Export <i
-                                                    class="ti ti-file-export ms-1"></i></a>
-                                        </div>
-                                    </div>
-
-                                    <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table
-                                                class="table table-custom align-middle table-nowrap table-hover mb-0">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="avatar-lg">
-                                                                <img src="assets/images/products/p-1.png"
-                                                                    alt="Product-1" class="img-fluid rounded-2">
-                                                            </div>
-                                                        </td>
-                                                        <td class="ps-0">
-                                                            <h5 class="fs-14 my-1"><a
-                                                                    href="apps-ecommerce-product-details.html"
-                                                                    class="link-reset">ASOS High Waist Tshirt</a></h5>
-                                                            <span class="text-muted fs-12">07 April 2024</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">$79.49</h5>
-                                                            <span class="text-muted fs-12">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">82</h5>
-                                                            <span class="text-muted fs-12">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div class="me-2">
-                                                                    <h5 class="fs-14 my-1">$6,518.18</h5>
-                                                                    <span class="text-muted fs-12">Amount</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="avatar-lg">
-                                                                <img src="assets/images/products/p-7.png"
-                                                                    alt="Product-1" class="img-fluid rounded-2">
-                                                            </div>
-                                                        </td>
-                                                        <td class="ps-0">
-                                                            <h5 class="fs-14 my-1"><a
-                                                                    href="apps-ecommerce-product-details.html"
-                                                                    class="link-reset">Marco Single Sofa</a></h5>
-                                                            <span class="text-muted fs-12">25 March 2024</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">$128.50</h5>
-                                                            <span class="text-muted fs-12">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">37</h5>
-                                                            <span class="text-muted fs-12">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div class="me-2">
-                                                                    <h5 class="fs-14 my-1">$4,754.50</h5>
-                                                                    <span class="text-muted fs-12">Amount</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="avatar-lg">
-                                                                <img src="assets/images/products/p-4.png"
-                                                                    alt="Product-1" class="img-fluid rounded-2">
-                                                            </div>
-                                                        </td>
-                                                        <td class="ps-0">
-                                                            <h5 class="fs-14 my-1"><a
-                                                                    href="apps-ecommerce-product-details.html"
-                                                                    class="link-reset">Smart Headphone </a></h5>
-                                                            <span class="text-muted fs-12">17 March 2024</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">$39.99</h5>
-                                                            <span class="text-muted fs-12">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">64</h5>
-                                                            <span class="text-muted fs-12">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div class="me-2">
-                                                                    <h5 class="fs-14 my-1">$2,559.36</h5>
-                                                                    <span class="text-muted fs-12">Amount</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="avatar-lg">
-                                                                <img src="assets/images/products/p-5.png"
-                                                                    alt="Product-1" class="img-fluid rounded-2">
-                                                            </div>
-                                                        </td>
-                                                        <td class="ps-0">
-                                                            <h5 class="fs-14 my-1"><a
-                                                                    href="apps-ecommerce-product-details.html"
-                                                                    class="link-reset">Lightweight Jacket</a></h5>
-                                                            <span class="text-muted fs-12">12 March 2024</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">$20.00</h5>
-                                                            <span class="text-muted fs-12">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">184</h5>
-                                                            <span class="text-muted fs-12">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div class="me-2">
-                                                                    <h5 class="fs-14 my-1">$3,680.00</h5>
-                                                                    <span class="text-muted fs-12">Amount</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <div class="avatar-lg">
-                                                                <img src="assets/images/products/p-6.png"
-                                                                    alt="Product-1" class="img-fluid rounded-2">
-                                                            </div>
-                                                        </td>
-                                                        <td class="ps-0">
-                                                            <h5 class="fs-14 my-1"><a
-                                                                    href="apps-ecommerce-product-details.html"
-                                                                    class="link-reset">Marco Shoes</a></h5>
-                                                            <span class="text-muted fs-12">05 March 2024</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">$28.49</h5>
-                                                            <span class="text-muted fs-12">Price</span>
-                                                        </td>
-                                                        <td>
-                                                            <h5 class="fs-14 my-1">69</h5>
-                                                            <span class="text-muted fs-12">Quantity</span>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex align-items-center justify-content-end">
-                                                                <div class="me-2">
-                                                                    <h5 class="fs-14 my-1">$1,965.81</h5>
-                                                                    <span class="text-muted fs-12">Amount</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div> <!-- end table-responsive-->
-                                    </div> <!-- end card-body-->
-
-                                    <div class="card-footer">
-                                        <div
-                                            class="align-items-center justify-content-between row text-center text-sm-start">
-                                            <div class="col-sm">
-                                                <div class="text-muted">
-                                                    Showing <span class="fw-semibold">5</span> of <span
-                                                        class="fw-semibold">10</span> Results
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-auto mt-3 mt-sm-0">
-                                                <ul
-                                                    class="pagination pagination-boxed pagination-sm mb-0 justify-content-center">
-                                                    <li class="page-item disabled">
-                                                        <a href="#" class="page-link"><i
-                                                                class="ti ti-chevron-left"></i></a>
-                                                    </li>
-                                                    <li class="page-item active">
-                                                        <a href="#" class="page-link">1</a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link">2</a>
-                                                    </li>
-                                                    <li class="page-item">
-                                                        <a href="#" class="page-link"><i
-                                                                class="ti ti-chevron-right"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div> <!-- -->
-                                    </div>
-                                </div> <!-- end card-->
-                            </div> <!-- end col-->
-                        </div> <!-- end row-->
-
-                    </div> <!-- end col-->
-
-                    <div class="col-auto info-sidebar">
-                        <div class="alert alert-primary d-flex align-items-center">
-                            <iconify-icon icon="solar:help-bold-duotone" class="fs-24 me-1"></iconify-icon> <b>Help
-                                line:</b> <span class="fw-medium ms-1">+(012) 123 456 78</span>
-                        </div>
-
-                        <div class="card bg-primary">
-                            <div class="card-body"
-                                style="background-image: url(assets/images/png/arrows.svg); background-size: contain; background-repeat: no-repeat; background-position: right bottom;">
-                                <h1><i class="ti ti-receipt-tax text-white"></i></h1>
-                                <h4 class="text-white">Estimated tax for this year</h4>
-                                <p class="text-white text-opacity-75">We kindly encourage you to review your recent
-                                    transactions</p>
-                                <a href="#!" class="btn btn-sm rounded-pill btn-info">Activate Now</a>
-                            </div> <!-- end card-body-->
-                        </div> <!-- end card-->
-
+                <div class="row">
+                    <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex mb-3 justify-content-between align-items-center">
-                                    <h4 class="header-title">Recent Orders:</h4>
-                                    <div>
-                                        <a href="javascript:void(0);"
-                                            class="btn btn-sm btn-primary rounded-circle btn-icon"><i
-                                                class="ti ti-plus"></i></a>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center gap-2 position-relative mb-2">
-                                    <div class="avatar-md flex-shrink-0">
-                                        <img src="assets/images/products/p-6.png" alt="product-pic" height="36">
-                                    </div>
-                                    <div>
-                                        <h5 class="fs-14 my-1"><a href="apps-ecommerce-order-details.html"
-                                                class="stretched-link link-reset">Marco Shoes</a></h5>
-                                        <span class="text-muted fs-12">$29.99 x 1 = $29.99</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge badge-soft-success px-2 py-1">Sold</span>
-                                    </div>
+                            <div class="card-header border-bottom card-tabs d-flex flex-wrap align-items-center gap-2">
+                                <div class="flex-grow-1">
+                                    <h4 class="header-title">Invoices</h4>
                                 </div>
 
-                                <div class="d-flex align-items-center gap-2 position-relative mb-2">
-                                    <div class="avatar-md flex-shrink-0">
-                                        <img src="assets/images/products/p-1.png" alt="product-pic" height="36">
+                                <div class="d-flex flex-wrap flex-lg-nowrap gap-2">
+                                    <div class="flex-shrink-0 d-flex align-items-center gap-2">
+                                        <div class="position-relative">
+                                            <input type="text" class="form-control ps-4" placeholder="Search Here...">
+                                            <i
+                                                class="ti ti-search position-absolute top-50 translate-middle-y start-0 ms-2"></i>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h5 class="fs-14 my-1"><a href="apps-ecommerce-order-details.html"
-                                                class="stretched-link link-reset">High Waist Tshirt</a></h5>
-                                        <span class="text-muted fs-12">$9.99 x 3 = $29.97</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge badge-soft-success px-2 py-1">Sold</span>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2 position-relative mb-2">
-                                    <div class="avatar-md flex-shrink-0">
-                                        <img src="assets/images/products/p-3.png" alt="product-pic" height="36">
-                                    </div>
-                                    <div>
-                                        <h5 class="fs-14 my-1"><a href="apps-ecommerce-order-details.html"
-                                                class="stretched-link link-reset">Comfirt Chair</a></h5>
-                                        <span class="text-muted fs-12">$49.99 x 1 = $49.99</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge badge-soft-danger px-2 py-1">Return</span>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2 position-relative mb-2">
-                                    <div class="avatar-md flex-shrink-0">
-                                        <img src="assets/images/products/p-4.png" alt="product-pic" height="36">
-                                    </div>
-                                    <div>
-                                        <h5 class="fs-14 my-1"><a href="apps-ecommerce-order-details.html"
-                                                class="stretched-link link-reset">Smart Headphone</a></h5>
-                                        <span class="text-muted fs-12">$39.99 x 1 = $39.99</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge badge-soft-success px-2 py-1">Sold</span>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-2 position-relative">
-                                    <div class="avatar-md flex-shrink-0">
-                                        <img src="assets/images/products/p-2.png" alt="product-pic" height="36">
-                                    </div>
-                                    <div>
-                                        <h5 class="fs-14 my-1"><a href="apps-ecommerce-order-details.html"
-                                                class="stretched-link link-reset">Laptop Bag</a></h5>
-                                        <span class="text-muted fs-12">$12.99 x 4 = $51.96</span>
-                                    </div>
-                                    <div class="ms-auto">
-                                        <span class="badge badge-soft-success px-2 py-1">Sold</span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-3 text-center">
-                                    <a href="#!"
-                                        class="text-decoration-underline fw-semibold ms-auto link-offset-2 link-dark">View
-                                        All</a>
-                                </div>
+                                    <a href="apps-invoice-create.html" class="btn btn-primary"><i
+                                            class="ti ti-plus me-1"></i>Add Invoice</a>
+                                </div><!-- end d-flex -->
                             </div>
-                            <div class="card-body p-0 border-top border-dashed">
-                                <h4 class="header-title px-3 mb-2 mt-3">Recent Activity:</h4>
-                                <div class="my-3 px-3" data-simplebar style="max-height: 370px;">
-                                    <div class="timeline-alt py-0">
-                                        <div class="timeline-item">
-                                            <i class="ti ti-basket bg-info-subtle text-info timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">You sold an item</a>
-                                                <span class="mb-1">Paul Burgess just purchased “My - Admin
-                                                    Dashboard”!</span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">5 minutes ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
 
-                                        <div class="timeline-item">
-                                            <i class="ti ti-rocket bg-primary-subtle text-primary timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">Product on the Theme
-                                                    Market</a>
-                                                <span class="mb-1">Reviewer added
-                                                    <span class="fw-medium">Admin Dashboard</span>
-                                                </span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">30 minutes ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover text-nowrap mb-0">
+                                    <thead class="bg-light-subtle">
+                                        <tr>
+                                            <th class="ps-3" style="width: 50px;">
+                                                <input type="checkbox" class="form-check-input" id="customCheck1">
+                                            </th>
+                                            <th>Invoice ID</th>
+                                            <th>Category </th>
+                                            <th>Created On</th>
+                                            <th>Invoice To</th>
+                                            <th>Amount</th>
+                                            <th>Due Date</th>
+                                            <th>Status</th>
+                                            <th class="text-center" style="width: 120px;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <!-- end table-head -->
 
-                                        <div class="timeline-item">
-                                            <i class="ti ti-message bg-info-subtle text-info timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">Robert Delaney</a>
-                                                <span class="mb-1">Send you message
-                                                    <span class="fw-medium">"Are you there?"</span>
-                                                </span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">2 hours ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck2">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1020@20</span></td>
+                                            <td>Fashion</td>
+                                            <td><span class="fs-15 text-muted">12 Apr 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-2.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Raul Villa</h6>
+                                                </div>
+                                            </td>
+                                            <td>$42,430</td>
+                                            <td><span class="fs-15 text-muted">12 Apr 2023</span></td>
+                                            <td>
+                                                <span class="badge bg-success-subtle text-success fs-12 p-1">Paid</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck3">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1240@25</span></td>
+                                            <td>Electronics</td>
+                                            <td><span class="fs-15 text-muted">14 Apr 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-3.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Fae Sims</h6>
+                                                </div>
+                                            </td>
+                                            <td>$416</td>
+                                            <td><span class="fs-15 text-muted">24 Apr 2023</span></td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-warning-subtle text-warning fs-12 p-1">Overdue</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck4">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1284@32</span></td>
+                                            <td>Mobile Accessories</td>
+                                            <td><span class="fs-15 text-muted">15 Apr 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-4.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">David Roderick</h6>
+                                                </div>
+                                            </td>
+                                            <td>$187</td>
+                                            <td><span class="fs-15 text-muted">25 Apr 2023</span></td>
+                                            <td>
+                                                <span class="badge bg-success-subtle text-success fs-12 p-1">Paid</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck5">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1279@69</span></td>
+                                            <td>Electronics</td>
+                                            <td><span class="fs-15 text-muted">6 Dec 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-5.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">James Zavel</h6>
+                                                </div>
+                                            </td>
+                                            <td>$165</td>
+                                            <td><span class="fs-15 text-muted">14 Dec 2023</span></td>
+                                            <td>
+                                                <span class="badge bg-success-subtle text-success fs-12 p-1">Paid</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck6">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1279@69</span></td>
+                                            <td>Electronics</td>
+                                            <td><span class="fs-15 text-muted">1 Jan 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-6.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Denese Martin</h6>
+                                                </div>
+                                            </td>
+                                            <td>$165</td>
+                                            <td><span class="fs-15 text-muted">14 Jan 2023</span></td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-danger-subtle text-danger fs-12 p-1">Cancelled</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck7">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1276@33</span></td>
+                                            <td>Watches</td>
+                                            <td><span class="fs-15 text-muted">2 Dec 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-7.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Jack Nunnally</h6>
+                                                </div>
+                                            </td>
+                                            <td>$192</td>
+                                            <td><span class="fs-15 text-muted">2 Dec 2023</span></td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-warning-subtle text-warning fs-12 p-1">Overdue</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck8">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1278@29</span></td>
+                                            <td>Bags</td>
+                                            <td><span class="fs-15 text-muted">12 May 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-8.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Margaret Shaw</h6>
+                                                </div>
+                                            </td>
+                                            <td>$159</td>
+                                            <td><span class="fs-15 text-muted">24 May 2023</span></td>
+                                            <td>
+                                                <span class="badge bg-success-subtle text-success fs-12 p-1">Paid</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck9">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1271@96</span></td>
+                                            <td>Cloth's</td>
+                                            <td><span class="fs-15 text-muted">21 Jun 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-9.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Anthony Williams</h6>
+                                                </div>
+                                            </td>
+                                            <td>$259</td>
+                                            <td><span class="fs-15 text-muted">1 July 2023</span></td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-danger-subtle text-danger fs-12 p-1">Cancelled</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck10">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1986@65</span></td>
+                                            <td>Sofa</td>
+                                            <td><span class="fs-15 text-muted">12 Aug 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-10.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Axie Barnes</h6>
+                                                </div>
+                                            </td>
+                                            <td>$259</td>
+                                            <td><span class="fs-15 text-muted">28 Aug 2023</span></td>
+                                            <td>
+                                                <span class="badge bg-success-subtle text-success fs-12 p-1">Paid</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                        <tr>
+                                            <td class="ps-3">
+                                                <input type="checkbox" class="form-check-input" id="customCheck11">
+                                            </td>
+                                            <td><span class="text-muted fw-semibold">#PC1984@38</span></td>
+                                            <td>Shoes</td>
+                                            <td><span class="fs-15 text-muted">8 Aug 2023</span></td>
+                                            <td>
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <div class="avatar-sm">
+                                                        <img src="assets/images/users/avatar-1.jpg" alt=""
+                                                            class="img-fluid rounded-circle">
+                                                    </div>
+                                                    <h6 class="fs-14 mb-0">Glen Morning</h6>
+                                                </div>
+                                            </td>
+                                            <td>$256</td>
+                                            <td><span class="fs-15 text-muted">30 Aug 2023</span></td>
+                                            <td>
+                                                <span
+                                                    class="badge bg-warning-subtle text-warning fs-12 p-1">Pending</span>
+                                            </td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-primary btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-eye"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-edit fs-16"></i></a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"> <i
+                                                            class="ti ti-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr><!-- end table-row -->
+                                    </tbody><!-- end table-body -->
+                                </table><!-- end table -->
+                            </div>
 
-                                        <div class="timeline-item">
-                                            <i class="ti ti-photo bg-primary-subtle text-primary timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">Audrey Tobey</a>
-                                                <span class="mb-1">Uploaded a photo
-                                                    <span class="fw-medium">"Error.jpg"</span>
-                                                </span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">14 hours ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-item">
-                                            <i class="ti ti-basket bg-info-subtle text-info timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">You sold an item</a>
-                                                <span class="mb-1">Paul Burgess just purchased “My - Admin
-                                                    Dashboard”!</span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">16 hours ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-item">
-                                            <i class="ti ti-rocket bg-primary-subtle text-primary timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">Product on the Bootstrap
-                                                    Market</a>
-                                                <span class="mb-1">Reviewer added
-                                                    <span class="fw-medium">Admin Dashboard</span>
-                                                </span>
-                                                <p class="mb-0 pb-3">
-                                                    <small class="text-muted">22 hours ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="timeline-item">
-                                            <i class="ti ti-message bg-info-subtle text-info timeline-icon"></i>
-                                            <div class="timeline-item-info">
-                                                <a href="javascript:void(0);"
-                                                    class="link-reset fw-semibold mb-1 d-block">Robert Delaney</a>
-                                                <span class="mb-1">Send you message
-                                                    <span class="fw-medium">"Are you there?"</span>
-                                                </span>
-                                                <p class="mb-0 pb-2">
-                                                    <small class="text-muted">2 days ago</small>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- end timeline -->
-                                </div> <!-- end slimscroll -->
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-end">
+                                    <ul class="pagination mb-0 justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">1</a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">3</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-right"></i></a>
+                                        </li>
+                                    </ul><!-- end pagination -->
+                                </div><!-- end flex -->
                             </div>
                         </div> <!-- end card-->
-                    </div> <!-- end col-->
-                </div> <!-- end row-->
+                    </div> <!-- end col -->
+                </div>
 
             </div> <!-- container -->
 
@@ -2691,7 +2211,6 @@
             <!-- end Footer -->
 
         </div>
-
         <!-- ============================================================== -->
         <!-- End Page content -->
         <!-- ============================================================== -->
@@ -3136,15 +2655,14 @@
     <!-- App js -->
     <script src="assets/js/app.js"></script>
 
-    <!-- Apex Chart js -->
-    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <!-- flatpickr -->
+    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
 
-    <!-- Projects Analytics Dashboard App js -->
-    <script src="assets/js/pages/dashboard-sales.js"></script>
+    <script>flatpickr("#datepicker-basic", { defaultDate: new Date() })</script>
 
 </body>
 
 
-<!-- Mirrored from coderthemes.com/osen/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:26:10 GMT -->
+<!-- Mirrored from coderthemes.com/osen/layouts/apps-invoices.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 Aug 2025 10:27:17 GMT -->
 
 </html>
