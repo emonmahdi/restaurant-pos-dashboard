@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Chat | Osen - Responsive Bootstrap 5 Admin Dashboard</title>
+    <title>Restaurant POS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -22,9 +22,6 @@
 
     <!-- App css -->
     <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-style" />
-
-    <!-- Include Flatpickr CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     <!-- Icons css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -145,8 +142,8 @@
                         </a>
                     </li>
                     <!-- Sales-->
-                    <li class="side-nav-item">
-                        <a href="apps-sales.html" class="side-nav-link">
+                    <li class="side-nav-item" style="background-color: #2F3A5F; color:#fff !important">
+                        <a href="apps-stock-out.html" class="side-nav-link" style=" color:#fff !important">
                             <span class="menu-icon"><i class="ti ti-message"></i></span>
                             <span class="menu-text"> Sales </span>
                         </a>
@@ -187,8 +184,8 @@
                         </a>
                     </li>
                     <!-- Reports-->
-                    <li class="side-nav-item" style="background-color: #2F3A5F;">
-                        <a href="apps-reports.html" class="side-nav-link" style=" color:#fff !important">
+                    <li class="side-nav-item">
+                        <a href="apps-reports.html" class="side-nav-link">
                             <span class="menu-icon"><i class="ti ti-message"></i></span>
                             <span class="menu-text"> Reports </span>
                         </a>
@@ -814,182 +811,91 @@
 
             <div class="page-container">
 
-                <!-- Page Title and Breadcrumb -->
+                <!-- Page Header -->
                 <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
-                    <div class="flex-grow-1 d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2">
                         <span class="menu-icon bg-light p-2 rounded-circle">
-                            <i class="ti ti-report-money fs-20 text-primary"></i>
+                            <i class="ti ti-package-off fs-20 text-danger"></i>
                         </span>
                         <div>
-                            <h4 class="fs-18 fw-semibold mb-0">Reports</h4>
-                            <p class="text-muted mb-0 fs-13">View and export detailed financial and sales reports</p>
+                            <h4 class="fs-18 fw-semibold mb-0">Sales</h4>
+                            <p class="text-muted mb-0 fs-13">Manage products that are out of stock</p>
                         </div>
                     </div>
 
-                    <div class="text-end">
+                    <div class="text-end ms-auto">
                         <ol class="breadcrumb m-0 py-0">
                             <li class="breadcrumb-item"><a href="dashboard.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Reports</li>
+                            <li class="breadcrumb-item active">Stock Out</li>
                         </ol>
                     </div>
                 </div>
 
-                <!-- Filter Section -->
-                <div class="card mt-4 shadow-sm">
-                    <div class="card-body">
-                        <!-- Report Filter Section -->
-                        <div class="d-flex flex-wrap align-items-center gap-3 mt-3">
-
-                            <!-- Date Range Picker -->
-                            <div class="flex-shrink-0" style="max-width: 250px;">
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="ti ti-calendar"></i></span>
-                                    <input type="text" id="reportDateRange" class="form-control"
-                                        placeholder="Select Date Range">
-                                </div>
-                            </div>
-
-                            <!-- Report Type Selector -->
-                            <div class="flex-shrink-0" style="min-width: 180px;">
-                                <select class="form-select">
-                                    <option value="">Report Type</option>
-                                    <option value="sales">Sales</option>
-                                    <option value="income">Income</option>
-                                    <option value="cost">Cost</option>
-                                    <option value="profit">Profit</option>
-                                </select>
-                            </div>
-
-                            <!-- Staff Selector -->
-                            <div class="flex-shrink-0" style="min-width: 180px;">
-                                <select class="form-select">
-                                    <option value="">Select Staff</option>
-                                    <option>All</option>
-                                    <option>Rahim Uddin</option>
-                                    <option>Karim Hossain</option>
-                                </select>
-                            </div>
-
-                            <!-- Export / Upload Button -->
-                            <div class="flex-shrink-0">
-                                <label class="btn btn-primary mb-0">
-                                    <i class="ti ti-file-export me-1"></i> Export Report
-                                    <input type="file" id="exportReportFile" class="d-none" accept=".csv, .xlsx">
-                                </label>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- Summary Cards -->
-                <div class="row mt-4 g-3">
-                    <div class="col-md-3">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="ti ti-shopping-cart fs-24 text-success mb-2"></i>
-                                <h6 class="mb-1">Total Orders</h6>
-                                <h5 class="fw-semibold">$1,250</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="ti ti-currency-dollar fs-24 text-primary mb-2"></i>
-                                <h6 class="mb-1">Total Income</h6>
-                                <h5 class="fw-semibold">$2,500</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="ti ti-wallet fs-24 text-danger mb-2"></i>
-                                <h6 class="mb-1">Total Cost</h6>
-                                <h5 class="fw-semibold">$1,000</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card text-center shadow-sm">
-                            <div class="card-body">
-                                <i class="ti ti-chart-pie fs-24 text-warning mb-2"></i>
-                                <h6 class="mb-1">Total Profit</h6>
-                                <h5 class="fw-semibold">$1,500</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Report Table -->
+                <!-- Stock Out Content -->
                 <div class="card mt-4 shadow-sm">
                     <div class="card-header d-flex justify-content-between align-items-center">
-                        <h5 class="card-title mb-0"><i class="ti ti-list-check me-2"></i> Detailed Reports</h5>
-                        <button class="btn btn-sm btn-outline-secondary">
-                            <i class="ti ti-printer me-1"></i> Print
+                        <h5 class="card-title mb-0">Stock Out Items</h5>
+                        <button class="btn btn-sm btn-primary">
+                            <i class="ti ti-plus"></i> Add New
                         </button>
                     </div>
+
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-hover align-middle mb-0">
+                            <table class="table table-striped align-middle mb-0">
                                 <thead class="table-light">
                                     <tr>
                                         <th>#</th>
-                                        <th>Date</th>
-                                        <th>Staff</th>
-                                        <th>Order ID</th>
-                                        <th>Type</th>
-                                        <th>Amount</th>
+                                        <th>Item Name</th>
+                                        <th>Category</th>
+                                        <th>Quantity</th>
+                                        <th>Last Updated</th>
                                         <th>Status</th>
-                                        <th class="text-end">Actions</th>
+                                        <th class="text-end">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td>Chicken Breast</td>
+                                        <td>Meat</td>
+                                        <td>0</td>
                                         <td>25 Aug 2025</td>
-                                        <td>Rahim Uddin</td>
-                                        <td>ORD001</td>
-                                        <td>Sale</td>
-                                        <td>$120</td>
-                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td><span class="badge bg-danger">Out of Stock</span></td>
                                         <td class="text-end">
-                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="ti ti-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="ti ti-trash"></i>
+                                            </button>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
-                                        <td>25 Aug 2025</td>
-                                        <td>Karim Hossain</td>
-                                        <td>ORD002</td>
-                                        <td>Sale</td>
-                                        <td>$85</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
-                                        <td class="text-end">
-                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
+                                        <td>French Fries</td>
+                                        <td>Snacks</td>
+                                        <td>0</td>
                                         <td>24 Aug 2025</td>
-                                        <td>Sohana Akter</td>
-                                        <td>ORD003</td>
-                                        <td>Income</td>
-                                        <td>$50</td>
-                                        <td><span class="badge bg-success">Completed</span></td>
+                                        <td><span class="badge bg-danger">Out of Stock</span></td>
                                         <td class="text-end">
-                                            <button class="btn btn-sm btn-primary"><i class="ti ti-eye"></i></button>
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="ti ti-edit"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="ti ti-trash"></i>
+                                            </button>
                                         </td>
                                     </tr>
+                                    <!-- More rows -->
                                 </tbody>
                             </table>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+
 
             <!-- Footer Start -->
             <footer class="footer">
@@ -1455,18 +1361,6 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
-    <!-- Include Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <!-- Initialize Flatpickr for Date Range -->
-    <script>
-        flatpickr("#reportDateRange", {
-            mode: "range",
-            dateFormat: "d M Y",
-            allowInput: true
-        });
-    </script>
 
 </body>
 
