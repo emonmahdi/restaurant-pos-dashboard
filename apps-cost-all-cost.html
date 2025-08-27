@@ -847,6 +847,177 @@
                     </div>
                 </div>
 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <!-- Header -->
+                            <div
+                                class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
+                                <h4 class="header-title mb-0">All Cost List</h4>
+                                <div>
+                                    <!-- Add Cost Button -->
+                                    <button type="button" class="btn btn-success bg-gradient" data-bs-toggle="modal"
+                                        data-bs-target="#addCostModal">
+                                        <i class="ti ti-plus me-1"></i> Add Cost
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-nowrap mb-0">
+                                    <thead class="bg-light-subtle">
+                                        <tr>
+                                            <th class="ps-3" style="width: 50px;">
+                                                <input type="checkbox" class="form-check-input" id="selectAllCosts">
+                                            </th>
+                                            <th>Cost ID</th>
+                                            <th>Category</th>
+                                            <th>Field of Cost</th>
+                                            <th>Amount</th>
+                                            <th>Spent By</th>
+                                            <th>Status</th>
+                                            <th class="text-center" style="width: 120px;">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Example Row -->
+                                        <tr>
+                                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                                            <td>COST001</td>
+                                            <td>Office Expenses</td>
+                                            <td>Office Rent</td>
+                                            <td>$1,200</td>
+                                            <td>John Doe</td>
+                                            <td><span class="badge bg-success">Approved</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ps-3"><input type="checkbox" class="form-check-input"></td>
+                                            <td>COST002</td>
+                                            <td>Utility Bills</td>
+                                            <td>Electricity</td>
+                                            <td>$350</td>
+                                            <td>Jane Smith</td>
+                                            <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                            <td class="pe-3">
+                                                <div class="hstack gap-1 justify-content-end">
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-success btn-icon btn-sm rounded-circle"
+                                                        title="Edit">
+                                                        <i class="ti ti-edit fs-16"></i>
+                                                    </a>
+                                                    <a href="javascript:void(0);"
+                                                        class="btn btn-soft-danger btn-icon btn-sm rounded-circle"
+                                                        title="Delete">
+                                                        <i class="ti ti-trash"></i>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="card-footer">
+                                <div class="d-flex justify-content-end">
+                                    <ul class="pagination mb-0">
+                                        <li class="page-item disabled">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-left"></i></a>
+                                        </li>
+                                        <li class="page-item active">
+                                            <a href="#" class="page-link bg-primary text-white">1</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link">2</a>
+                                        </li>
+                                        <li class="page-item">
+                                            <a href="#" class="page-link"><i class="ti ti-chevrons-right"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add Cost Modal -->
+                <div class="modal fade" id="addCostModal" tabindex="-1" aria-labelledby="addCostModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-light">
+                                <h5 class="modal-title" id="addCostModalLabel">Add Cost</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <!-- Modal Body -->
+                            <div class="modal-body">
+                                <form id="costForm">
+                                    <!-- Category -->
+                                    <div class="mb-3">
+                                        <label for="category" class="form-label">Category</label>
+                                        <select class="form-select" id="category" required>
+                                            <option value="" disabled selected>Select Category</option>
+                                            <option value="Office Expenses">Office Expenses</option>
+                                            <option value="Utility Bills">Utility Bills</option>
+                                            <option value="Marketing">Marketing</option>
+                                        </select>
+                                    </div>
+                                    <!-- Field of Cost -->
+                                    <div class="mb-3">
+                                        <label for="fieldOfCost" class="form-label">Field of Cost</label>
+                                        <select class="form-select" id="fieldOfCost" required>
+                                            <option value="" disabled selected>Select Field</option>
+                                            <option value="Office Rent">Office Rent</option>
+                                            <option value="Electricity">Electricity</option>
+                                            <option value="Advertising">Advertising</option>
+                                        </select>
+                                    </div>
+                                    <!-- Amount -->
+                                    <div class="mb-3">
+                                        <label for="amount" class="form-label">Amount</label>
+                                        <input type="number" class="form-control" id="amount" placeholder="Enter amount"
+                                            required>
+                                    </div>
+                                    <!-- Description -->
+                                    <div class="mb-3">
+                                        <label for="description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="description" rows="2"
+                                            placeholder="Enter description"></textarea>
+                                    </div>
+                                    <!-- Spent By -->
+                                    <div class="mb-3">
+                                        <label for="spentBy" class="form-label">Spent By</label>
+                                        <input type="text" class="form-control" id="spentBy" placeholder="Enter name"
+                                            required>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- Modal Footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" form="costForm" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
