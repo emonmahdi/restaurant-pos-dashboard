@@ -948,9 +948,10 @@
                 <div class="card mt-4 shadow-sm">
                     <div class="card-header d-flex justify-content-between align-items-center">
                         <h5 class="card-title mb-0"><i class="ti ti-list-check me-2"></i> Detailed Reports</h5>
-                        <button class="btn btn-sm btn-outline-secondary">
+                        <button class="btn btn-sm btn-outline-secondary" id="printReportBtn">
                             <i class="ti ti-printer me-1"></i> Print
                         </button>
+
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -1488,6 +1489,21 @@
             allowInput: true
         });
     </script>
+    <script>
+        (function () {
+            const btn = document.getElementById('printReportBtn');
+            if (!btn) return;
+
+            btn.addEventListener('click', function () {
+                // If you load data dynamically, you can force reflow before print:
+                requestAnimationFrame(() => {
+                    setTimeout(() => window.print(), 50);
+                });
+            });
+        })();
+    </script>
+
+
 
 </body>
 
