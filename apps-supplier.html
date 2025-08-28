@@ -1011,11 +1011,14 @@
                                             <input type="file" class="form-control" id="logo" accept="image/*">
                                         </div>
                                         <!-- Status -->
-                                        <div class="col-md-6">
-                                            <label for="status" class="form-label">Status</label>
-                                            <select class="form-select" id="status" required>
-                                                <option value="Active" selected>Active</option>
-                                                <option value="Inactive">Inactive</option>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="choices-single-no-search"
+                                                class="form-label text-muted">Status</label>
+                                            <select class="form-control" id="choices-single-no-search"
+                                                name="choices-single-no-search" data-choices data-choices-search-false
+                                                data-choices-removeItem>
+                                                <option value="Active">Active</option>
+                                                <option value="Deactive">Deactive</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1029,20 +1032,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- JavaScript for File Upload Handling -->
-                <script>
-                    function handleFileUpload(event) {
-                        const file = event.target.files[0];
-                        if (file) {
-                            alert("File selected: " + file.name);
-                            // You can add logic to upload file via AJAX or validate format
-                        }
-                    }
-                </script>
-
-
-
 
             </div> <!-- container -->
 
@@ -1516,6 +1505,18 @@
 
     <!-- Quill Demo js -->
     <script src="assets/js/pages/apps-email.js"></script>
+
+    <!-- JavaScript for File Upload Handling -->
+    <script>
+        function handleFileUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                alert("File selected: " + file.name);
+                // You can add logic to upload file via AJAX or validate format
+            }
+        }
+    </script>
+
 
 </body>
 
