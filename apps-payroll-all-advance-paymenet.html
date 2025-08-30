@@ -918,10 +918,11 @@
                                 <button class="btn btn-primary btn-sm">Print</button>
                             </div>
 
-                            <!-- Filter Bar -->
+                            <!-- Filter Bar with Labels -->
                             <div class="card-body border-bottom py-2">
-                                <form class="row g-2 align-items-center">
+                                <form class="row g-2 align-items-end">
                                     <div class="col-md-3">
+                                        <label class="form-label small mb-1">Showroom</label>
                                         <select class="form-select form-select-sm" name="showroom">
                                             <option selected>Demo Electronics</option>
                                             <option>City Showroom</option>
@@ -929,6 +930,7 @@
                                         </select>
                                     </div>
                                     <div class="col-md-2">
+                                        <label class="form-label small mb-1">Employee</label>
                                         <select class="form-select form-select-sm" name="employee">
                                             <option selected>Select Employee</option>
                                             <option>Ibrahim Khalil</option>
@@ -937,19 +939,23 @@
                                         </select>
                                     </div>
                                     <div class="col-md-2">
+                                        <label class="form-label small mb-1">Salary Month</label>
                                         <input type="month" class="form-control form-control-sm" name="salaryMonth"
                                             placeholder="YYYY-MM">
                                     </div>
                                     <div class="col-md-2">
+                                        <label class="form-label small mb-1">From Date</label>
                                         <input type="date" class="form-control form-control-sm" name="fromDate"
                                             placeholder="From">
                                     </div>
                                     <div class="col-md-2">
+                                        <label class="form-label small mb-1">To Date</label>
                                         <input type="date" class="form-control form-control-sm" name="toDate"
                                             placeholder="To">
                                     </div>
-                                    <div class="col-md-1">
-                                        <button type="submit" class="btn btn-primary btn-sm w-100">search</button>
+                                    <div class="col-md-1 d-grid">
+                                        <label class="form-label invisible">Search</label>
+                                        <button type="submit" class="btn btn-primary btn-sm w-100">Search</button>
                                     </div>
                                 </form>
                             </div>
@@ -1064,6 +1070,7 @@
                         </div>
                     </div>
                 </div>
+
 
 
 

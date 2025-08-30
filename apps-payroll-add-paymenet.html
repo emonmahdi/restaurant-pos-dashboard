@@ -906,7 +906,6 @@
                     </div>
                 </div>
                 <!-- Body Content -->
-                <!-- Add Payment Data -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -915,18 +914,34 @@
                             <div
                                 class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
                                 <h4 class="header-title mb-0">Add Payment</h4>
-                                <div class="d-flex gap-2">
-                                    <input type="date" class="form-control form-control-sm" value="2025-08-30">
-                                    <select class="form-select form-select-sm">
-                                        <option selected>Demo Electronics</option>
-                                        <option>ABC Corporation</option>
-                                    </select>
-                                    <select class="form-select form-select-sm">
-                                        <option selected>August 2025</option>
-                                        <option>July 2025</option>
-                                    </select>
-                                    <button class="btn btn-primary btn-sm">Search</button>
-                                </div>
+                            </div>
+
+                            <!-- Filter Section with Labels -->
+                            <div class="card-body border-bottom pb-0">
+                                <form class="row g-3">
+                                    <div class="col-md-3">
+                                        <label for="paymentDate" class="form-label small mb-1">Date</label>
+                                        <input type="date" id="paymentDate" class="form-control form-control-sm"
+                                            value="2025-08-30">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="showroom" class="form-label small mb-1">Showroom</label>
+                                        <select id="showroom" class="form-select form-select-sm">
+                                            <option selected>Demo Electronics</option>
+                                            <option>ABC Corporation</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label for="salaryMonth" class="form-label small mb-1">Salary Month</label>
+                                        <select id="salaryMonth" class="form-select form-select-sm">
+                                            <option selected>August 2025</option>
+                                            <option>July 2025</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3 d-flex align-items-end">
+                                        <button type="submit" class="btn btn-primary btn-sm w-100">Search</button>
+                                    </div>
+                                </form>
                             </div>
 
                             <!-- Table -->
@@ -956,7 +971,7 @@
                                             <td>$3000</td>
                                             <td>$2000</td>
                                             <td>
-                                                <input type="number" class="form-control form-control-sm"
+                                                <input type="number" class="form-control form-control-sm text-end"
                                                     placeholder="Enter payment">
                                             </td>
                                             <td>$0</td>
@@ -972,7 +987,7 @@
                                             <td>$1500</td>
                                             <td>$2500</td>
                                             <td>
-                                                <input type="number" class="form-control form-control-sm"
+                                                <input type="number" class="form-control form-control-sm text-end"
                                                     placeholder="Enter payment">
                                             </td>
                                             <td>$0</td>
@@ -988,7 +1003,7 @@
                                             <td>$1000</td>
                                             <td>$2000</td>
                                             <td>
-                                                <input type="number" class="form-control form-control-sm"
+                                                <input type="number" class="form-control form-control-sm text-end"
                                                     placeholder="Enter payment">
                                             </td>
                                             <td>$0</td>
@@ -1001,9 +1016,11 @@
                             <div class="card-footer d-flex justify-content-end">
                                 <button class="btn btn-secondary">Save</button>
                             </div>
+
                         </div>
                     </div>
                 </div>
+
 
 
             </div> <!-- container -->
