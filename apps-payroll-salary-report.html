@@ -891,39 +891,123 @@
 
                 <div class="page-title-head d-flex align-items-sm-center flex-sm-row flex-column gap-2">
                     <div class="flex-grow-1">
-                        <h4 class="fs-18 fw-semibold mb-0">Doctors</h4>
+                        <h4 class="fs-18 fw-semibold mb-0">Salary Report</h4>
                     </div>
 
                     <div class="text-end">
                         <ol class="breadcrumb m-0 py-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Osen</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Restaurant</a></li>
 
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Hospital</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Payroll</a></li>
 
-                            <li class="breadcrumb-item active">Doctors</li>
+                            <li class="breadcrumb-item active">Salary Report</li>
                         </ol>
                     </div>
                 </div>
 
-
-
-
+                <!-- Body Content -->
+                <!-- Salary Report -->
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
+
+                            <!-- Header -->
                             <div
                                 class="card-header d-flex align-items-center justify-content-between border-bottom border-light">
-                                <h4 class="header-title">Add New</h4>
-                                <div>
-                                    <a href="apps-hospital-add-doctors.html" class="btn btn-success bg-gradient"><i
-                                            class="ti ti-plus me-1"></i> Add Doctor</a>
-                                    <a href="#" class="btn btn-secondary bg-gradient"><i
-                                            class="ti ti-file-import me-1"></i> Import</a>
+                                <h4 class="header-title mb-0">Salary Report</h4>
+                            </div>
+
+                            <!-- Filters -->
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <!-- Showroom -->
+                                    <div class="col-md-3">
+                                        <label for="showroom" class="form-label">Showroom</label>
+                                        <select id="showroom" class="form-select form-select-sm">
+                                            <option selected>Demo Electronics</option>
+                                            <option>ABC Corporation</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Employee -->
+                                    <div class="col-md-3">
+                                        <label for="employee" class="form-label">Employee</label>
+                                        <select id="employee" class="form-select form-select-sm">
+                                            <option selected>Select Employee</option>
+                                            <option>Shachsaw</option>
+                                            <option>Jane Smith</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Salary Month -->
+                                    <div class="col-md-3">
+                                        <label for="salary-month" class="form-label">Salary Month</label>
+                                        <input type="month" id="salary-month" class="form-control form-control-sm">
+                                    </div>
+
+                                    <!-- Search Button -->
+                                    <div class="col-md-3">
+                                        <label class="form-label d-block invisible">Search</label>
+                                        <button class="btn btn-primary btn-sm w-100">Search</button>
+                                    </div>
                                 </div>
                             </div>
+
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0">
+                                    <thead class="bg-light-subtle">
+                                        <tr>
+                                            <th>SL</th>
+                                            <th>Employee Info</th>
+                                            <th>Salary Month</th>
+                                            <th>Basic</th>
+                                            <th>Incentive</th>
+                                            <th>Deduction</th>
+                                            <th>Bonus</th>
+                                            <th>Advance</th>
+                                            <th>Paid</th>
+                                            <th>Due</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Dummy Row 1 -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <strong>Shachsaw</strong><br>
+                                                01234567891<br>
+                                                Salesperson
+                                            </td>
+                                            <td>2025 - May</td>
+                                            <td>2000</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>2000</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="fw-bold">
+                                        <tr>
+                                            <td colspan="3" class="text-end">Total</td>
+                                            <td>2000</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>2000</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
 
             </div> <!-- container -->
 
