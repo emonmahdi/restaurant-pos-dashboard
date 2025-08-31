@@ -909,6 +909,158 @@
                     </div>
                 </div>
 
+                <!-- Sms body content -->
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card">
+                            <div class="card-header border-bottom border-dashed">
+                                <h4 class="card-title">SMS Management</h4>
+                                <p class="text-muted mb-0">
+                                    Manage SMS gateway settings, send promotional messages, and configure automated SMS
+                                    notifications for your restaurant.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <form id="smsSettingsForm">
+                                    <!-- SMS Gateway Settings -->
+                                    <h5 class="mb-3">SMS Gateway Settings</h5>
+                                    <div class="row">
+                                        <!-- SMS Gateway Enable -->
+                                        <div class="col-lg-4">
+                                            <div class="form-check form-switch mb-3">
+                                                <input class="form-check-input" type="checkbox" id="enableSmsGateway"
+                                                    checked>
+                                                <label class="form-check-label" for="enableSmsGateway">Enable SMS
+                                                    Gateway</label>
+                                            </div>
+                                        </div>
+                                        <!-- API Key -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="smsApiKey" class="form-label">API Key <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="smsApiKey"
+                                                    placeholder="Enter your SMS API Key" required>
+                                            </div>
+                                        </div>
+                                        <!-- Sender ID -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="smsSenderId" class="form-label">Sender ID</label>
+                                                <input type="text" class="form-control" id="smsSenderId"
+                                                    placeholder="e.g. RESTO">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <!-- Send SMS Section -->
+                                    <h5 class="mb-3">Send SMS</h5>
+                                    <div class="row">
+                                        <!-- Customer Group -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="customerGroup" class="form-label">Customer Group</label>
+                                                <select class="form-select" id="customerGroup">
+                                                    <option selected>Select Group</option>
+                                                    <option>All Customers</option>
+                                                    <option>VIP Customers</option>
+                                                    <option>Regular Customers</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Custom Number -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="customNumber" class="form-label">Custom Number</label>
+                                                <input type="text" class="form-control" id="customNumber"
+                                                    placeholder="Enter phone number">
+                                            </div>
+                                        </div>
+                                        <!-- SMS Template -->
+                                        <div class="col-lg-12">
+                                            <div class="mb-3">
+                                                <label for="smsTemplate" class="form-label">Message Template</label>
+                                                <textarea class="form-control" id="smsTemplate" rows="3"
+                                                    placeholder="Type your message here..."></textarea>
+                                                <small class="text-muted">Characters: <span
+                                                        id="charCount">0</span>/160</small>
+                                            </div>
+                                        </div>
+                                        <!-- Send SMS Button -->
+                                        <div class="col-lg-12 text-end">
+                                            <button type="button" class="btn btn-primary px-4">
+                                                <i class="ti ti-send me-1"></i> Send SMS
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <!-- SMS Templates -->
+                                    <h5 class="mb-3">Quick SMS Templates</h5>
+                                    <div class="row">
+                                        <div class="col-lg-4 mb-2">
+                                            <button type="button" class="btn btn-outline-primary w-100"
+                                                onclick="insertTemplate('Thank you for dining with us! Visit again.')">
+                                                Thank You Message
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-4 mb-2">
+                                            <button type="button" class="btn btn-outline-primary w-100"
+                                                onclick="insertTemplate('Enjoy 10% off on your next visit. Use code: SAVE10')">
+                                                Promo Offer
+                                            </button>
+                                        </div>
+                                        <div class="col-lg-4 mb-2">
+                                            <button type="button" class="btn btn-outline-primary w-100"
+                                                onclick="insertTemplate('Your order is ready for pickup. Thank you!')">
+                                                Order Ready
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <!-- SMS History -->
+                                    <h5 class="mb-3">SMS History</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered align-middle">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Recipient</th>
+                                                    <th>Message</th>
+                                                    <th>Status</th>
+                                                    <th>Sent At</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>+880123456789</td>
+                                                    <td>Thank you for visiting!</td>
+                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td>2025-08-31 12:30 PM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>VIP Customers</td>
+                                                    <td>Enjoy 10% off on your next visit!</td>
+                                                    <td><span class="badge bg-success">Delivered</span></td>
+                                                    <td>2025-08-31 12:10 PM</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
             <!-- Footer Start -->
@@ -1375,6 +1527,23 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <!-- SMS js  -->
+    <script>
+        // Character count for SMS message
+        const smsTemplate = document.getElementById('smsTemplate');
+        const charCount = document.getElementById('charCount');
+
+        smsTemplate.addEventListener('input', () => {
+            charCount.textContent = smsTemplate.value.length;
+        });
+
+        // Insert template into SMS text area
+        function insertTemplate(text) {
+            smsTemplate.value = text;
+            charCount.textContent = text.length;
+        }
+    </script>
 
 </body>
 

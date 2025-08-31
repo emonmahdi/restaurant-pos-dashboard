@@ -909,6 +909,177 @@
                     </div>
                 </div>
 
+                <!-- User Management Body -->
+                <div class="row">
+                    <div class="col-lg-11 mx-auto">
+                        <div class="card">
+                            <div class="card-header border-bottom border-dashed">
+                                <h4 class="card-title">User Management</h4>
+                                <p class="text-muted mb-0">
+                                    Manage system users, assign roles and permissions for your restaurant POS dashboard.
+                                </p>
+                            </div>
+                            <div class="card-body">
+                                <!-- Add New User Form -->
+                                <h5 class="mb-3">Add New User</h5>
+                                <form id="addUserForm">
+                                    <div class="row">
+                                        <!-- Full Name -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userName" class="form-label">Full Name <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" class="form-control" id="userName"
+                                                    placeholder="Enter full name" required>
+                                            </div>
+                                        </div>
+                                        <!-- Email -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userEmail" class="form-label">Email <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="email" class="form-control" id="userEmail"
+                                                    placeholder="Enter email address" required>
+                                            </div>
+                                        </div>
+                                        <!-- Phone -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userPhone" class="form-label">Phone</label>
+                                                <input type="text" class="form-control" id="userPhone"
+                                                    placeholder="+880 123 456 789">
+                                            </div>
+                                        </div>
+                                        <!-- Role -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userRole" class="form-label">Role <span
+                                                        class="text-danger">*</span></label>
+                                                <select class="form-select" id="userRole" required>
+                                                    <option selected>Select Role</option>
+                                                    <option>Admin</option>
+                                                    <option>Manager</option>
+                                                    <option>Cashier</option>
+                                                    <option>Waiter</option>
+                                                    <option>Chef</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- Password -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userPassword" class="form-label">Password <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="password" class="form-control" id="userPassword"
+                                                    placeholder="Enter password" required>
+                                            </div>
+                                        </div>
+                                        <!-- Status -->
+                                        <div class="col-lg-6">
+                                            <div class="mb-3">
+                                                <label for="userStatus" class="form-label">Status</label>
+                                                <select class="form-select" id="userStatus">
+                                                    <option selected>Active</option>
+                                                    <option>Inactive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Permissions -->
+                                    <h6 class="mt-4 mb-2">Assign Permissions:</h6>
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="permView" checked>
+                                                <label class="form-check-label" for="permView">View</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="permAdd">
+                                                <label class="form-check-label" for="permAdd">Add</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="permEdit">
+                                                <label class="form-check-label" for="permEdit">Edit</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" id="permDelete">
+                                                <label class="form-check-label" for="permDelete">Delete</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Add User Button -->
+                                    <div class="text-end mt-4">
+                                        <button type="submit" class="btn btn-primary px-4">
+                                            <i class="ti ti-user-plus me-1"></i> Add User
+                                        </button>
+                                    </div>
+                                </form>
+
+                                <hr class="my-4">
+
+                                <!-- User List -->
+                                <h5 class="mb-3">User List</h5>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th>Status</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John Doe</td>
+                                                <td>john@example.com</td>
+                                                <td>Manager</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                            class="ti ti-edit"></i></button>
+                                                    <button class="btn btn-sm btn-outline-danger me-1"><i
+                                                            class="ti ti-trash"></i></button>
+                                                    <button class="btn btn-sm btn-outline-warning"><i
+                                                            class="ti ti-lock"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Jane Smith</td>
+                                                <td>jane@example.com</td>
+                                                <td>Cashier</td>
+                                                <td><span class="badge bg-danger">Inactive</span></td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-outline-primary me-1"><i
+                                                            class="ti ti-edit"></i></button>
+                                                    <button class="btn btn-sm btn-outline-danger me-1"><i
+                                                            class="ti ti-trash"></i></button>
+                                                    <button class="btn btn-sm btn-outline-warning"><i
+                                                            class="ti ti-lock"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
 
             <!-- Footer Start -->
