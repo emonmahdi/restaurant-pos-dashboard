@@ -192,6 +192,14 @@
             </div>
             <button class="arrow-btn arrow-right" id="scrollRight"><i class="fa-solid fa-angle-right"></i></button>
         </div>
+
+        <div class="row">
+            <div class="col-md-8" id="productDisplay">
+                <h4 class="mb-3 text-muted">Click a category to view items</h4>
+                <div class="row g-3" id="productRow"></div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -219,6 +227,120 @@
         leftBtn.addEventListener('click', () => scrollOneCard('left'));
         rightBtn.addEventListener('click', () => scrollOneCard('right'));
     </script>
+
+    <script>
+        const productRow = document.getElementById('productRow');
+
+        // ✅ Dummy Product Data (with multiple products per category)
+        const menuData = {
+            Pizza: [
+                { name: 'Margherita Pizza', price: '৳800', img: 'https://images.unsplash.com/photo-1601924638867-3ec4f227c26d?w=300' },
+                { name: 'Pepperoni Pizza', price: '৳1000', img: 'https://images.unsplash.com/photo-1594007654729-407eedc4e3d3?w=300' },
+                { name: 'Veggie Pizza', price: '৳900', img: 'https://images.unsplash.com/photo-1589187155474-17864aa78f39?w=300' },
+                { name: 'BBQ Pizza', price: '৳1100', img: 'https://images.unsplash.com/photo-1603079848276-6a98d0a6b0fa?w=300' }
+            ],
+            Burger: [
+                { name: 'Cheese Burger', price: '৳600', img: '/assets/images/sales/burger.jfif' },
+                { name: 'Chicken Burger', price: '৳700', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=300' },
+                { name: 'Double Beef Burger', price: '৳900', img: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300' },
+                { name: 'Crispy Burger', price: '৳800', img: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=300' }
+            ],
+            Pasta: [
+                { name: 'Spaghetti Pasta', price: '৳900', img: '/assets/images/sales/pasta.jfif' },
+                { name: 'Penne Alfredo', price: '৳1100', img: 'https://images.unsplash.com/photo-1625944230944-7a0c9f5d4f37?w=300' },
+                { name: 'Fettuccine', price: '৳1200', img: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=300' }
+            ],
+            Dessert: [
+                { name: 'Chocolate Cake', price: '৳500', img: 'https://images.unsplash.com/photo-1599785209707-28cf1323dccc?w=300' },
+                { name: 'Ice Cream', price: '৳400', img: 'https://images.unsplash.com/photo-1551024601-bec78aea704b?w=300' },
+                { name: 'Brownie', price: '৳600', img: 'https://images.unsplash.com/photo-1543353071-087092ec393a?w=300' }
+            ],
+            Sandwich: [
+                { name: 'Club Sandwich', price: '৳800', img: 'https://images.unsplash.com/photo-1606755962773-1a5ebf3e4b85?w=300' },
+                { name: 'Grilled Cheese', price: '৳500', img: 'https://images.unsplash.com/photo-1617196035661-1e0d0a2f9e45?w=300' },
+                { name: 'Chicken Sandwich', price: '৳700', img: 'https://images.unsplash.com/photo-1562967916-eb82221dfb36?w=300' },
+                { name: 'Veggie Sandwich', price: '৳600', img: 'https://images.unsplash.com/photo-1588014329771-7b322c6a2101?w=300' }
+            ],
+            Steak: [
+                { name: 'Grilled Steak', price: '৳1500', img: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=300' },
+                { name: 'T-Bone Steak', price: '৳2200', img: 'https://images.unsplash.com/photo-1625938147926-f1841c2c24e3?w=300' },
+                { name: 'Sirloin Steak', price: '৳1800', img: 'https://images.unsplash.com/photo-1585238342024-78e96f9e73b3?w=300' },
+                { name: 'Ribeye Steak', price: '৳2500', img: 'https://images.unsplash.com/photo-1603575449614-38f2362a62b0?w=300' }
+            ],
+            Juice: [
+                { name: 'Orange Juice', price: '৳400', img: 'https://images.unsplash.com/photo-1580982539220-998c4f885299?w=300' },
+                { name: 'Apple Juice', price: '৳300', img: 'https://images.unsplash.com/photo-1582381086568-5a83fd7b4c4b?w=300' },
+                { name: 'Mango Juice', price: '৳500', img: 'https://images.unsplash.com/photo-1617196035661-1e0d0a2f9e45?w=300' },
+                { name: 'Pineapple Juice', price: '৳400', img: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=300' }
+            ]
+        };
+
+
+        // ✅ Click Event for Category Titles
+        document.querySelectorAll('.category-card .card-title').forEach(title => {
+            title.addEventListener('click', () => {
+                const category = title.innerText.trim();
+                const items = menuData[category] || [];
+                displayProducts(items, category);
+            });
+        });
+
+        function displayProducts(items, category) {
+            productRow.innerHTML = ''; // Clear old products
+
+            if (items.length === 0) {
+                productRow.innerHTML = `<p class="text-danger text-center mt-3">No items available for ${category}</p>`;
+                return;
+            }
+
+            items.forEach(item => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-3 mb-4'; // Responsive 4-column layout
+                col.innerHTML = `
+            <div class="card product-card shadow-sm h-100 text-center" style="border-radius:14px; overflow:hidden; transition: all 0.3s ease; border: 1px solid #e6e6e6;">
+                <img src="${item.img}" class="card-img-top" alt="${item.name}" style="height:150px; object-fit:cover; border-bottom:1px solid #f0f0f0;">
+                <div class="card-body p-3">
+                    <h6 class="card-title mb-2" style="font-size:15px; font-weight:600; color:#333;">${item.name}</h6>
+                    <p class="card-text text-success fw-bold mb-3" style="font-size:14px;">${item.price}</p>
+                    <button class="btn btn-add-to-cart w-100">Add</button>
+                </div>
+            </div>
+        `;
+                productRow.appendChild(col);
+            });
+
+            // Apply custom styles dynamically for Add button
+            const buttons = document.querySelectorAll('.btn-add-to-cart');
+            buttons.forEach(btn => {
+                btn.style.backgroundColor = '#465DFF';
+                btn.style.color = '#fff';
+                btn.style.border = 'none';
+                btn.style.borderRadius = '8px';
+                btn.style.fontSize = '14px';
+                btn.style.padding = '8px';
+                btn.style.transition = 'background 0.3s ease';
+                btn.addEventListener('mouseenter', () => btn.style.backgroundColor = '#2d44d9');
+                btn.addEventListener('mouseleave', () => btn.style.backgroundColor = '#465DFF');
+            });
+
+            // Add hover effect for the cards
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-5px)';
+                    card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                    card.style.boxShadow = '0 4px 10px rgba(0,0,0,0.05)';
+                });
+            });
+        }
+
+    </script>
+
+
+
 
 </body>
 
