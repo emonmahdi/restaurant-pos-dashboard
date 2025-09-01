@@ -30,7 +30,7 @@
         .category-wrapper {
             position: relative;
             margin: 0 auto;
-            max-width: 1200px;
+            max-width: 100%;
             padding: 0 20px;
         }
 
@@ -107,6 +107,19 @@
         .arrow-right {
             right: -10px;
         }
+
+        /* ====== */
+        #orderPanel {
+            transition: all 0.3s ease;
+        }
+
+        .table th,
+        .table td {
+            padding: 8px !important;
+            vertical-align: middle !important;
+        }
+
+        /* ====== */
 
         @media(max-width: 1200px) {
             .category-card {
@@ -193,18 +206,102 @@
             <button class="arrow-btn arrow-right" id="scrollRight"><i class="fa-solid fa-angle-right"></i></button>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8" id="productDisplay">
                 <h4 class="mb-3 text-muted">Click a category to view items</h4>
                 <div class="row g-3" id="productRow"></div>
             </div>
+        </div> -->
+
+        <div class="row my-5">
+            <!-- Left side: Products -->
+            <div class="col-md-8" id="productDisplay">
+                <h4 class="mb-3 text-start fw-bold"
+                    style="color: #6D35E7; font-size: 15px; letter-spacing: 1px; margin:30px 0;">
+                    Click a Category to View Items
+                </h4>
+
+                <div class="row g-3" id="productRow"></div>
+            </div>
+
+            <!-- Right side: Order Details -->
+            <div class="col-md-4 d-none" id="orderPanel">
+                <div class="card shadow-sm border-0" style="border-radius:12px; overflow:hidden;">
+                    <div class="card-header text-white text-center fw-semibold"
+                        style="background:#465DFF; font-size:16px; padding:12px;">
+                        Order Details
+                    </div>
+                    <div class="card-body p-3" style="max-height:420px; overflow-y:auto;">
+                        <table class="table table-bordered table-hover align-middle text-center mb-3" id="orderTable"
+                            style="font-size:14px;">
+                            <thead class="table-light">
+                                <tr>
+                                    <th style="width:5%;">#</th>
+                                    <th style="width:45%;">Product</th>
+                                    <th style="width:20%;">Qty</th>
+                                    <th style="width:30%;">Rate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Items will be added dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card-footer bg-white" style="padding:12px;">
+                        <div class="mb-3">
+                            <label class="form-label mb-1">Table</label>
+                            <select class="form-select form-select-sm" id="tableSelect">
+                                <option value="">Select Table</option>
+                                <option value="T1">Table 1</option>
+                                <option value="T2">Table 2</option>
+                                <option value="T3">Table 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label mb-1">Waiter</label>
+                            <select class="form-select form-select-sm" id="waiterSelect">
+                                <option value="">Select Waiter</option>
+                                <option value="John">John</option>
+                                <option value="Alex">Alex</option>
+                                <option value="Sara">Sara</option>
+                            </select>
+                        </div>
+                        <div class="d-flex justify-content-between fw-semibold mb-2" style="font-size:14px;">
+                            <span>Total:</span>
+                            <span id="totalAmount">৳0</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label mb-1">Paid</label>
+                            <input type="number" class="form-control form-control-sm" id="paidAmount" value="0">
+                        </div>
+                        <div class="d-flex justify-content-between fw-semibold mb-3" style="font-size:14px;">
+                            <span>Due:</span>
+                            <span id="dueAmount">৳0</span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label mb-1">Receiver</label>
+                            <input type="text" class="form-control form-control-sm" id="receiverName"
+                                placeholder="Enter receiver name">
+                        </div>
+                        <button class="btn w-100 py-2" id="saveOrderBtn"
+                            style="background:#465DFF; color:#fff; font-weight:600; border-radius:8px;">
+                            Save Order
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
 
     </div>
 
 
     <!-- Font awesome -->
     <script src="assets/js/all.min.js"></script>
+
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     <script>
@@ -275,6 +372,8 @@
             ]
         };
 
+        // ====================================
+
 
         // ✅ Click Event for Category Titles
         document.querySelectorAll('.category-card .card-title').forEach(title => {
@@ -285,8 +384,10 @@
             });
         });
 
+        let orderItems = [];
+
         function displayProducts(items, category) {
-            productRow.innerHTML = ''; // Clear old products
+            productRow.innerHTML = '';
 
             if (items.length === 0) {
                 productRow.innerHTML = `<p class="text-danger text-center mt-3">No items available for ${category}</p>`;
@@ -295,23 +396,31 @@
 
             items.forEach(item => {
                 const col = document.createElement('div');
-                col.className = 'col-6 col-md-3 mb-4'; // Responsive 4-column layout
+                col.className = 'col-6 col-md-3 mb-4';
                 col.innerHTML = `
-            <div class="card product-card shadow-sm h-100 text-center" style="border-radius:14px; overflow:hidden; transition: all 0.3s ease; border: 1px solid #e6e6e6;">
-                <img src="${item.img}" class="card-img-top" alt="${item.name}" style="height:150px; object-fit:cover; border-bottom:1px solid #f0f0f0;">
+            <div class="card product-card shadow-sm h-100 text-center" 
+                style="border-radius:14px; overflow:hidden; transition: all 0.3s ease; border: 1px solid #e6e6e6;">
+                <img src="${item.img}" class="card-img-top" alt="${item.name}" 
+                    style="height:150px; object-fit:cover; border-bottom:1px solid #f0f0f0;">
                 <div class="card-body p-3">
                     <h6 class="card-title mb-2" style="font-size:15px; font-weight:600; color:#333;">${item.name}</h6>
                     <p class="card-text text-success fw-bold mb-3" style="font-size:14px;">${item.price}</p>
-                    <button class="btn btn-add-to-cart w-100">Add</button>
+                    <button class="btn btn-add-to-cart w-100" 
+                        data-name="${item.name}" 
+                        data-price="${item.price.replace('৳', '')}">Add</button>
                 </div>
             </div>
         `;
                 productRow.appendChild(col);
             });
 
-            // Apply custom styles dynamically for Add button
-            const buttons = document.querySelectorAll('.btn-add-to-cart');
-            buttons.forEach(btn => {
+            styleAddButtons();
+            addCardHoverEffect();
+            attachAddButtonEvents();
+        }
+
+        function styleAddButtons() {
+            document.querySelectorAll('.btn-add-to-cart').forEach(btn => {
                 btn.style.backgroundColor = '#465DFF';
                 btn.style.color = '#fff';
                 btn.style.border = 'none';
@@ -322,10 +431,10 @@
                 btn.addEventListener('mouseenter', () => btn.style.backgroundColor = '#2d44d9');
                 btn.addEventListener('mouseleave', () => btn.style.backgroundColor = '#465DFF');
             });
+        }
 
-            // Add hover effect for the cards
-            const cards = document.querySelectorAll('.product-card');
-            cards.forEach(card => {
+        function addCardHoverEffect() {
+            document.querySelectorAll('.product-card').forEach(card => {
                 card.addEventListener('mouseenter', () => {
                     card.style.transform = 'translateY(-5px)';
                     card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
@@ -336,6 +445,149 @@
                 });
             });
         }
+
+        function attachAddButtonEvents() {
+            document.querySelectorAll('.btn-add-to-cart').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // ✅ Show the order panel if hidden
+                    const orderPanel = document.getElementById('orderPanel');
+                    if (orderPanel.classList.contains('d-none')) {
+                        orderPanel.classList.remove('d-none');
+                        orderPanel.style.opacity = 0;
+                        setTimeout(() => {
+                            orderPanel.style.transition = 'opacity 0.3s ease';
+                            orderPanel.style.opacity = 1;
+                        }, 50);
+                    }
+
+                    const name = btn.getAttribute('data-name');
+                    const price = parseFloat(btn.getAttribute('data-price'));
+
+                    const existing = orderItems.find(item => item.name === name);
+                    if (existing) {
+                        existing.qty += 1;
+                    } else {
+                        orderItems.push({ name, price, qty: 1 });
+                    }
+                    updateOrderTable();
+                });
+            });
+        }
+
+        function updateOrderTable() {
+            const tbody = document.querySelector('#orderTable tbody');
+            tbody.innerHTML = '';
+            let total = 0;
+
+            orderItems.forEach((item, index) => {
+                total += item.price * item.qty;
+                const row = `
+            <tr>
+                <td>${index + 1}</td>
+                <td class="text-start">${item.name}</td>
+                <td>${item.qty}</td>
+                <td>৳${item.price}</td>
+            </tr>
+        `;
+                tbody.innerHTML += row;
+            });
+
+            document.getElementById('totalAmount').innerText = `৳${total}`;
+            const paid = parseFloat(document.getElementById('paidAmount').value) || 0;
+            document.getElementById('dueAmount').innerText = `৳${total - paid}`;
+        }
+
+        // ✅ Update Due when Paid changes
+        document.getElementById('paidAmount').addEventListener('input', updateOrderTable);
+
+        // ✅ Save Button
+        document.getElementById('saveOrderBtn').addEventListener('click', () => {
+            if (orderItems.length === 0) {
+                Swal.fire('Error', 'No items in the order!', 'error');
+                return;
+            }
+            const table = document.getElementById('tableSelect').value;
+            const waiter = document.getElementById('waiterSelect').value;
+            const receiver = document.getElementById('receiverName').value;
+
+            if (!table || !waiter || !receiver) {
+                Swal.fire('Warning', 'Please fill all details!', 'warning');
+                return;
+            }
+
+            Swal.fire({
+                title: 'Order Saved!',
+                text: 'Your order has been successfully saved.',
+                icon: 'success',
+                confirmButtonColor: '#465DFF'
+            });
+
+            // ✅ Reset after save
+            orderItems = [];
+            updateOrderTable();
+            document.getElementById('tableSelect').value = '';
+            document.getElementById('waiterSelect').value = '';
+            document.getElementById('receiverName').value = '';
+            document.getElementById('paidAmount').value = 0;
+
+            // ✅ Hide order panel after save
+            const orderPanel = document.getElementById('orderPanel');
+            orderPanel.classList.add('d-none');
+        });
+
+
+
+        // function displayProducts(items, category) {
+        //     productRow.innerHTML = ''; // Clear old products
+
+        //     if (items.length === 0) {
+        //         productRow.innerHTML = `<p class="text-danger text-center mt-3">No items available for ${category}</p>`;
+        //         return;
+        //     }
+
+        //     items.forEach(item => {
+        //         const col = document.createElement('div');
+        //         col.className = 'col-6 col-md-3 mb-4'; // Responsive 4-column layout
+        //         col.innerHTML = `
+        //     <div class="card product-card shadow-sm h-100 text-center" style="border-radius:14px; overflow:hidden; transition: all 0.3s ease; border: 1px solid #e6e6e6;">
+        //         <img src="${item.img}" class="card-img-top" alt="${item.name}" style="height:150px; object-fit:cover; border-bottom:1px solid #f0f0f0;">
+        //         <div class="card-body p-3">
+        //             <h6 class="card-title mb-2" style="font-size:15px; font-weight:600; color:#333;">${item.name}</h6>
+        //             <p class="card-text text-success fw-bold mb-3" style="font-size:14px;">${item.price}</p>
+        //             <button class="btn btn-add-to-cart w-100">Add</button>
+        //         </div>
+        //     </div>
+        // `;
+        //         productRow.appendChild(col);
+        //     });
+
+        //     // Apply custom styles dynamically for Add button
+        //     const buttons = document.querySelectorAll('.btn-add-to-cart');
+        //     buttons.forEach(btn => {
+        //         btn.style.backgroundColor = '#465DFF';
+        //         btn.style.color = '#fff';
+        //         btn.style.border = 'none';
+        //         btn.style.borderRadius = '8px';
+        //         btn.style.fontSize = '14px';
+        //         btn.style.padding = '8px';
+        //         btn.style.transition = 'background 0.3s ease';
+        //         btn.addEventListener('mouseenter', () => btn.style.backgroundColor = '#2d44d9');
+        //         btn.addEventListener('mouseleave', () => btn.style.backgroundColor = '#465DFF');
+        //     });
+
+        //     // Add hover effect for the cards
+        //     const cards = document.querySelectorAll('.product-card');
+        //     cards.forEach(card => {
+        //         card.addEventListener('mouseenter', () => {
+        //             card.style.transform = 'translateY(-5px)';
+        //             card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.1)';
+        //         });
+        //         card.addEventListener('mouseleave', () => {
+        //             card.style.transform = 'translateY(0)';
+        //             card.style.boxShadow = '0 4px 10px rgba(0,0,0,0.05)';
+        //         });
+        //     });
+        // }
 
     </script>
 
